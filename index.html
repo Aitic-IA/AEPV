@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aula de la sesión 1 del taller AEPV y AITIC. Aprende a crear un Proyecto de ChatGPT para una tarea repetitiva.">
+<title>Sesión 1 · Tu primer Proyecto de trabajo con IA | AEPV y AITIC</title>
+<style>
+:root{color-scheme:light;--ink:#13273a;--muted:#4a5e6d;--paper:#f5f7f6;--white:#fff;--line:#d6e2e1;--teal:#00635d;--mint:#d9f9ed;--navy:#102939;--amber:#f9d995;--radius:21px;--max:1120px;scroll-padding-top:5.5rem}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.58 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:.18em}
+button,textarea,input{font:inherit}
+button{cursor:pointer}
+a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid #128777;outline-offset:4px}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{line-height:1.12}
+h2{font-size:clamp(1.65rem,4vw,2.55rem);letter-spacing:-.045em;margin-bottom:.7rem}
+h3{font-size:1.12rem;margin-bottom:.55rem;letter-spacing:-.014em}
+p{margin-bottom:.85rem}
+.wrap{width:min(var(--max),100% - 2.5rem);margin-inline:auto}
+.skip{position:absolute;left:.75rem;top:-5rem;z-index:10;background:var(--white);padding:.5rem 1rem;border-radius:.5rem}
+.skip:focus{top:.5rem}
+.top{background:var(--navy);color:#fff}
+.top .wrap{min-height:65px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.identity{font-weight:800;letter-spacing:.075em;font-size:.97rem;white-space:nowrap}
+.identity span{color:#9de6d5;margin-inline:.32rem}
+.topnote{font-size:.84rem;color:#cfdfdf;text-align:right}
+.hero{color:#fff;background:radial-gradient(ellipse at 92% 15%,#1c544f 0%,transparent 53%),var(--navy);border-top:1px solid #35515c}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(1.5rem,6vw,5rem);align-items:center;padding-block:clamp(2.5rem,6vw,5rem)}
+.kicker,.overline{font-size:.77rem;letter-spacing:.14em;font-weight:850;text-transform:uppercase}
+.kicker{color:#9de6d5;margin-bottom:.8rem}
+.overline{color:var(--teal);margin-bottom:.5rem}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.25rem);line-height:.99;letter-spacing:-.075em;margin-bottom:1rem;text-wrap:balance}
+.hero h1 span{color:#a9f0d9}
+.hero .lead{font-size:clamp(1rem,2vw,1.17rem);color:#e1eded;max-width:32rem}
+.hero .date{color:#e1eded;font-size:.9rem;margin:1.15rem 0 .85rem}
+.actions{display:flex;flex-wrap:wrap;gap:.65rem}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid transparent;border-radius:11px;text-decoration:none;font-weight:750;padding:.5rem .85rem}
+.primary{background:#a9f0d9;color:#0e382e}
+.primary:hover{background:#cdf9e9}
+.ghost{color:#fff;border-color:#668386}
+.ghost:hover{background:#244754}
+.route{border:1px solid #567b7b;background:#173943;border-radius:var(--radius);padding:1.15rem}
+.route p{font-size:.78rem;font-weight:780;letter-spacing:.12em;color:#b6e6db;text-transform:uppercase;margin-bottom:.7rem}
+.route ol{list-style:none;display:grid;gap:.55rem;padding:0;margin:0}
+.route li{display:grid;grid-template-columns:2rem 1fr;gap:.65rem;align-items:center;background:#214650;border-radius:12px;padding:.65rem}
+.route li span{display:grid;place-items:center;background:#a9f0d9;color:#163d35;width:2rem;height:2rem;border-radius:8px;font-size:.76rem;font-weight:850}
+.route strong,.route small{display:block}
+.route small{color:#d4e6e3;font-size:.83rem}
+.nav{position:sticky;top:0;z-index:3;background:#fff;border-bottom:1px solid var(--line)}
+.nav ul{list-style:none;display:flex;gap:clamp(.4rem,3vw,2.1rem);flex-wrap:wrap;padding:.4rem 0;margin:0}
+.nav a{display:inline-flex;align-items:center;min-height:39px;padding:.15rem .23rem;color:var(--ink);font-weight:720;text-decoration:none;font-size:.86rem}
+.nav a:hover,.nav a:focus-visible{text-decoration:underline;color:var(--teal)}
+main{padding-block:clamp(1.8rem,5vw,3.7rem)}
+main section+section{margin-top:clamp(1.9rem,5vw,4rem)}
+.intro{max-width:44rem;color:var(--muted)}
+.duo,.traffic,.practice{display:grid;gap:1rem}
+.duo,.practice{grid-template-columns:repeat(2,minmax(0,1fr))}
+.traffic{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card,.prompt,.scratch,.finish,.step{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1rem,2.5vw,1.5rem);min-width:0}
+.card p:last-child,.step p:last-child,.scratch p:last-child,.finish p:last-child{margin-bottom:0}
+.card p,.step p,.scratch p,.finish p{color:var(--muted)}
+.card .cap{display:inline-block;font-weight:780;font-size:.75rem;padding:.2rem .57rem;border-radius:99px;margin-bottom:.65rem}
+.green{background:#dff3e9;color:#15493d}
+.yellow{background:#ffedc6;color:#624611}
+.red{background:#fbe3e0;color:#782b25}
+.revision{margin:1rem 0 0;border-left:4px solid #087768;background:#e8f5f2;padding:.8rem 1rem;border-radius:0 12px 12px 0;color:var(--ink)}
+.prompt{margin-top:1rem;background:#edf6f3}
+.prompt .where{color:var(--muted);margin-bottom:.65rem}
+details{color:var(--ink)}
+summary{min-height:44px;padding:.58rem .2rem;font-weight:750;cursor:pointer;list-style-position:inside}
+summary::marker{color:var(--teal)}
+.prompt pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:.94rem;background:#fff;border:1px solid #d1e1dc;border-radius:12px;padding:1rem;margin:.4rem 0 .85rem}
+.copy{background:var(--teal);color:#fff}
+.copy:hover{background:#004c47}
+[hidden]{display:none!important}
+.status{font-size:.86rem;color:var(--teal);margin-left:.5rem}
+.letters{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.65rem;padding:0;margin:1.1rem 0}
+.letters li{background:#fff;border:1px solid var(--line);border-radius:15px;padding:.8rem}
+.letter{display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:8px;background:var(--mint);color:#12493e;font-size:1.25rem;font-weight:850;margin-bottom:.45rem}
+.letters p{margin:0;font-size:.89rem;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1rem 0;padding:0;list-style:none;counter-reset:step}
+.step{counter-increment:step}
+.step h3::before{content:"0" counter(step) "  ";font-size:.85rem;color:var(--teal);margin-right:.25rem}
+.scratch{margin-top:1rem}
+.scratch label{display:block;font-weight:750;margin-top:.65rem}
+.scratch textarea{display:block;width:100%;resize:vertical;min-height:4.3rem;margin:.35rem 0 .7rem;border:1px solid #879e9a;border-radius:10px;padding:.65rem;color:var(--ink);background:#fbfdfc}
+.pills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.pills details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:.3rem .85rem}
+.pills details p{color:var(--muted);padding:0 .2rem}
+.finish{background:#e2f4ee;border-color:#b9dacf}
+.finish ul{list-style:none;margin:.7rem 0 1rem;padding:0}
+.finish label{display:flex;align-items:baseline;gap:.6rem;padding:.27rem 0}
+.finish input{accent-color:var(--teal);min-width:1.1rem;min-height:1.1rem;align-self:flex-start;margin:.25rem 0 0}
+.finish .homework{border-top:1px solid #b9dacf;padding-top:.9rem}
+footer{background:#e8eeed;border-top:1px solid var(--line);padding:1.2rem 0;color:var(--muted);font-size:.88rem}
+footer p{margin:0}
+footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 1rem;padding:0;margin:.45rem 0 0}
+@media(max-width:800px){.letters{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){:root{scroll-padding-top:6.5rem}.wrap{width:calc(100% - 1.75rem)}.hero .wrap,.duo,.traffic,.steps,.pills{grid-template-columns:1fr}.hero .wrap{gap:1.35rem}.hero h1{text-wrap:initial}.route{padding:.8rem}.route li{padding:.48rem}.nav ul{gap:.08rem .5rem}.nav a{min-height:35px;font-size:.81rem}.letters{grid-template-columns:repeat(2,minmax(0,1fr))}.status{display:block;margin:.45rem 0 0}.topnote{font-size:.72rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body,.hero,.card,.prompt,.step,.finish,.scratch{background:#fff;color:#111}.nav,.actions,.copy,.route,.skip,.status{display:none!important}.hero{border:0}.hero .wrap{display:block;padding-block:.5rem}.hero .lead,.hero .date,.hero h1 span,.kicker{color:#222}.top{background:#fff;color:#111}.topnote,.identity span{color:#111}.wrap{width:100%}main{padding-block:1rem}main section+section{margin-top:1.3rem}.prompt,details,.card,.step,.finish{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+  <div class="top"><div class="wrap">
+    <div class="identity" aria-label="AITIC y AEPV">AITIC <span aria-hidden="true">/</span> AEPV</div>
+    <div class="topnote">Curso 1 · Asistentes para tareas repetitivas</div>
+  </div></div>
+  <div class="hero"><div class="wrap">
+    <div>
+      <p class="kicker">Taller práctico · Sesión 1 de 2</p>
+      <h1>Tu primer Proyecto <span>de trabajo con IA</span></h1>
+      <p class="lead">Trae una tarea que repites. Hoy la harás en un Proyecto de ChatGPT y comprobarás si el resultado te sirve.</p>
+      <p class="date"><time datetime="2026-11-10T09:30:00+01:00">Martes 10 de noviembre de 2026</time> · 9:30–12:30</p>
+      <div class="actions"><a class="button primary" href="#prepara">Empezar la sesión <span aria-hidden="true">&nbsp;↓</span></a><a class="button ghost" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Abrir ChatGPT <span aria-hidden="true">&nbsp;↗</span></a></div>
+    </div>
+    <aside class="route" aria-label="Recorrido de hoy">
+      <p>Recorrido de hoy</p>
+      <ol>
+        <li><span>01</span><div><strong>Prepara</strong><small>Cuenta, datos y una chuleta breve</small></div></li>
+        <li><span>02</span><div><strong>Construye</strong><small>Tu tarea, tu Proyecto y tu primer encargo</small></div></li>
+        <li><span>03</span><div><strong>Prueba</strong><small>Comprueba una respuesta y corrígela</small></div></li>
+      </ol>
+    </aside>
+  </div></div>
+</header>
+<nav class="nav" aria-label="Contenido de la sesión"><div class="wrap"><ul>
+  <li><a href="#prepara">Preparación</a></li><li><a href="#metodo">OCDTF</a></li><li><a href="#datos">Datos</a></li><li><a href="#proyecto">Proyecto</a></li><li><a href="#prueba">Revisión</a></li>
+</ul></div></nav>
+<main id="contenido" class="wrap">
+<section id="prepara" aria-labelledby="titulo-prepara">
+  <p class="overline">01 / Antes de empezar</p>
+  <h2 id="titulo-prepara">Prepara tu cuenta</h2>
+  <p class="intro">Entra en ChatGPT con una cuenta autorizada para el uso que vas a hacer. Si ya tienes una ficha profesional, recupera lo que te sirva. Si empiezas de cero, usa la entrevista.</p>
+  <div class="duo">
+    <article class="card"><h3>Personalización general</h3><p>En <strong>Configuración → Personalización</strong> puedes revisar tus instrucciones generales. Ahí van tus preferencias para el trabajo habitual, como el idioma o el tipo de respuesta que te resulta útil.</p></article>
+    <article class="card"><h3>Memoria y ficha profesional</h3><p>Si la memoria está disponible, decide qué contexto general quieres que recuerde. Guarda la ficha completa en un archivo propio y lleva a cada Proyecto solo la parte que necesite para su tarea.</p></article>
+  </div>
+  <article class="prompt">
+    <p class="overline">Entrevista 1 · Opcional</p>
+    <h3>Prepara tu ficha profesional</h3>
+    <p class="where">Pégala en un chat general. Responde a cada pregunta con tus palabras. Revisa el borrador antes de usarlo en Personalización.</p>
+    <details><summary>Ver el texto de la entrevista profesional</summary>
+      <pre id="prompt-perfil">Ayúdame a preparar una ficha breve de mi perfil profesional para trabajar con IA. Hazme cinco preguntas, una por mensaje, y espera mi respuesta antes de seguir:
+1. ¿Qué función desempeño y qué tipo de trabajo hago?
+2. ¿Qué tareas hago con más frecuencia?
+3. ¿Cuál de ellas me gustaría agilizar y por qué?
+4. ¿Qué información o documentos suelo usar? Pídeme solo tipos de documentos.
+5. ¿Cómo prefiero que me respondas y qué necesito verificar antes de usar una respuesta?
+Si falta un dato esencial, haz una sola repregunta breve. Si me cuesta responder, dame ejemplos genéricos y espera a que elija o escriba el mío. Usa solo lo que confirme. Evita nombres reales, credenciales y datos confidenciales.
+Al terminar, prepara una ficha breve con lo confirmado y, en un bloque aparte, un borrador de instrucciones personalizadas generales en primera persona, de hasta 900 caracteres. Pídeme que lo revise antes de usarlo. Deja cualquier cambio de ajustes o memoria para mi decisión.</pre>
+      <button class="button copy" type="button" data-copy="prompt-perfil" aria-label="Copiar entrevista profesional" hidden>Copiar entrevista</button><span class="status" role="status"></span>
+    </details>
+  </article>
+</section>
+<section id="metodo" aria-labelledby="titulo-metodo">
+  <p class="overline">Chuleta para escribir o dictar</p>
+  <h2 id="titulo-metodo">Método OCDTF</h2>
+  <p class="intro">Empieza por el resultado que quieres obtener. Usa las demás preguntas para explicar lo que todavía falte.</p>
+  <ul class="letters"><li><span class="letter">O</span><div><strong>Objetivo</strong><p>¿Qué resultado necesito y para quién?</p></div></li><li><span class="letter">C</span><div><strong>Contexto</strong><p>¿Qué necesita saber para entender la situación?</p></div></li><li><span class="letter">D</span><div><strong>Datos</strong><p>¿Qué información o fuente debe usar?</p></div></li><li><span class="letter">T</span><div><strong>Tono</strong><p>¿Cómo debe sonar para quien va a leerlo?</p></div></li><li><span class="letter">F</span><div><strong>Formato</strong><p>¿En qué forma y con qué extensión lo necesito?</p></div></li></ul>
+</section>
+<section id="datos" aria-labelledby="titulo-datos">
+  <p class="overline">Antes de adjuntar o pegar</p>
+  <h2 id="titulo-datos">Semáforo de datos</h2>
+  <div class="traffic">
+    <article class="card"><span class="cap green">Verde · Puedes practicar</span><h3>Datos seguros para el aula</h3><p>Usa ejemplos ficticios, plantillas vacías o información pública autorizada.</p></article>
+    <article class="card"><span class="cap yellow">Amarillo · Comprueba</span><h3>Información interna</h3><p>Confirma el permiso y la cuenta autorizada. Reduce la información a lo necesario y anonimiza cuando corresponda.</p></article>
+    <article class="card"><span class="cap red">Rojo · Deja fuera</span><h3>Datos sensibles</h3><p>Deja fuera las credenciales, los datos sensibles y el material confidencial sin autorización.</p></article>
+  </div>
+  <p class="revision"><strong>Revisión humana.</strong> Comprueba fechas, cifras y compromisos con el original. La persona responsable valida la salida antes de usarla o enviarla.</p>
+</section>
+<section id="proyecto" aria-labelledby="titulo-proyecto">
+  <p class="overline">02 / Trabajo en tu puesto</p>
+  <h2 id="titulo-proyecto">Construye tu Proyecto</h2>
+  <p class="intro">Empieza con una tarea que puedas explicar en una frase y una salida que sepas revisar. Las instrucciones del Proyecto vendrán de lo que aprendas al hacerla.</p>
+  <ol class="steps">
+    <li class="step"><h3>Crea el espacio</h3><p>En la barra lateral de ChatGPT, elige <strong>Nuevo proyecto</strong>. Dale un nombre que describa la tarea y abre su primer chat.</p></li>
+    <li class="step"><h3>Cuenta qué haces</h3><p>Explica tu tarea con tus palabras. Si te cuesta decidir por dónde empezar, usa la entrevista de abajo dentro del Proyecto.</p></li>
+    <li class="step"><h3>Reúne lo imprescindible</h3><p>Prepara un caso ficticio o autorizado. Añade solo la nota, plantilla o fragmento que ayude. Indica qué documento debe servir de referencia.</p></li>
+    <li class="step"><h3>Haz el primer encargo</h3><p>Escribe qué resultado necesitas para ese caso. Si dudas, vuelve a la chuleta OCDTF y completa lo que falte.</p></li>
+  </ol>
+  <article class="prompt">
+    <p class="overline">Entrevista 2 · En tu Proyecto</p>
+    <h3>Define la tarea que vas a repetir</h3>
+    <p class="where">Al pegarla, la primera pregunta te pedirá que expliques la tarea en una frase. Después de revisar la ficha, escribe tu primer encargo.</p>
+    <details><summary>Ver el texto de la entrevista del Proyecto</summary>
+      <pre id="prompt-proyecto">Ayúdame a definir una tarea repetitiva para este Proyecto. Empieza pidiéndome que la explique en una frase con mis palabras y espera mi respuesta. Después hazme hasta cuatro preguntas, una por mensaje, sobre lo que falte:
+1. ¿Qué resultado necesito, para quién y en qué formato?
+2. ¿Qué contexto y datos cambian cada vez que hago la tarea?
+3. ¿Qué fuente puedo aportar y qué regla debe respetar el resultado?
+4. ¿Qué comprobaré yo y qué debe quedar pendiente si faltan datos?
+Si mi tarea es demasiado amplia, pídeme que elija un solo resultado y espera mi decisión. Puedes dar pistas breves. Evita pedirme datos sensibles. Usa solo lo que yo confirme.
+Al final, resume lo acordado en una ficha corta de trabajo. Separa la tarea, los datos de cada caso, la fuente, la salida y la revisión humana. Pídeme que corrija la ficha y que escriba mi primer encargo. Espera a que yo aporte ese encargo y su entrada.</pre>
+      <button class="button copy" type="button" data-copy="prompt-proyecto" aria-label="Copiar entrevista del Proyecto" hidden>Copiar entrevista</button><span class="status" role="status"></span>
+    </details>
+  </article>
+  <div class="scratch">
+    <h3>Ordena tu idea antes de escribir</h3>
+    <p id="nota-ayuda">Apunta solo información ficticia o general. La página no envía ni guarda estas notas. Si quieres conservarlas, pásalas a tu propio cuaderno.</p>
+    <label for="tarea">Mi tarea en una frase</label>
+    <textarea id="tarea" rows="2" autocomplete="off" aria-describedby="nota-ayuda"></textarea>
+    <label for="salida">Qué necesito recibir y qué comprobaré</label>
+    <textarea id="salida" rows="2" autocomplete="off" aria-describedby="nota-ayuda"></textarea>
+  </div>
+</section>
+<section id="prueba" aria-labelledby="titulo-prueba">
+  <p class="overline">03 / Prueba y corrige</p>
+  <h2 id="titulo-prueba">Comprueba tu primera salida</h2>
+  <p class="intro">Abre la fuente y comprueba un dato importante. Si algo falla, señala el punto concreto, pide una corrección y vuelve a revisar ese dato.</p>
+  <div class="pills"><details><summary>Me he atascado</summary><p>«Explícame el siguiente paso en lenguaje sencillo. Dame un ejemplo corto y espera a que lo pruebe».</p></details><details><summary>Falta información</summary><p>«Si falta un dato que pueda cambiar la respuesta, hazme una pregunta concreta antes de seguir».</p></details><details><summary>Quiero comprobarlo</summary><p>«Señala en qué parte de la fuente te apoyas para esa afirmación. Marca lo que no puedas verificar».</p></details><details><summary>Quiero corregirlo</summary><p>«Cambia solo este punto, conserva los datos comprobados y dime qué has modificado».</p></details></div>
+  <p class="revision"><strong>Cuando te sirva para repetir.</strong> Guarda las reglas que hayan funcionado en las instrucciones del Proyecto. Deja la guía o plantilla entre las fuentes y lleva los datos de cada caso a su chat.</p>
+</section>
+<section class="finish" aria-labelledby="titulo-cierre">
+  <p class="overline">Cierre del martes</p>
+  <h2 id="titulo-cierre">Antes de salir</h2>
+  <ul>
+    <li><label><input type="checkbox" autocomplete="off"> He explicado mi tarea con mis palabras.</label></li>
+    <li><label><input type="checkbox" autocomplete="off"> He probado un primer encargo y revisado una parte de la respuesta.</label></li>
+    <li><label><input type="checkbox" autocomplete="off"> Sé qué entrada distinta voy a probar.</label></li>
+  </ul>
+  <p class="homework"><strong>Diez minutos antes del jueves.</strong> Abre otro chat del mismo Proyecto, prueba una entrada distinta y apunta qué tuviste que aclarar o corregir. Si aún no tienes acceso, trae una entrada ficticia y la salida que esperarías.</p>
+  <p>Nos vemos el <strong><time datetime="2026-11-12T09:30:00+01:00">jueves 12 de noviembre</time>, de 9:30 a 12:30</strong>.</p>
+</section>
+</main>
+<footer><div class="wrap">
+  <p><strong>AITIC y AEPV</strong> · Asistentes de IA para tareas repetitivas</p>
+  <ul aria-label="Ayuda oficial de OpenAI">
+    <li><a href="https://help.openai.com/es-419/articles/10169521-projects-in-chatgpt">Proyectos</a></li>
+    <li><a href="https://help.openai.com/es-es/articles/8096356-chatgpt-custom-instructions">Instrucciones personalizadas</a></li>
+    <li><a href="https://help.openai.com/es-es/articles/8590148-memory-in-chatgpt">Memoria</a></li>
+  </ul>
+</div></footer>
+<script>
+  async function copyInterview(button) {
+    const prompt = document.getElementById(button.dataset.copy);
+    const status = button.nextElementSibling;
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Portapapeles no disponible');
+      await navigator.clipboard.writeText(prompt.textContent);
+      status.textContent = 'Copiada. Pégala en ChatGPT.';
+    } catch {
+      const selection = window.getSelection();
+      if (selection) {
+        const range = document.createRange();
+        range.selectNodeContents(prompt);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        status.textContent = 'Texto seleccionado. Usa la opción Copiar de tu dispositivo.';
+      } else {
+        status.textContent = 'Selecciona el texto de arriba y cópialo manualmente.';
+      }
+    }
+  }
+
+  document.querySelectorAll('[data-copy]').forEach(button => {
+    button.hidden = false;
+    button.addEventListener('click', () => copyInterview(button));
+  });
+</script>
+</body>
+</html>
