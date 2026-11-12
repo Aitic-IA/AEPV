@@ -3,13 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Aula de la sesión 1 del taller AEPV y AITIC. Aprende a crear un Proyecto de ChatGPT para una tarea repetitiva.">
-<title>Sesión 1 · Tu primer Proyecto de trabajo con IA | AEPV y AITIC</title>
+<meta name="description" content="Las dos jornadas del taller AEPV y AITIC. Crea tu Proyecto de IA y aprende a revisarlo y mejorarlo con una ruta personalizada.">
+<title>Taller de asistentes de IA · Jornadas 1 y 2 | AITIC y AEPV</title>
 <style>
+:root{color-scheme:light;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#13273a;background:#f5f7f6}
+*{box-sizing:border-box}body{margin:0}.wrap{width:min(1120px,calc(100% - 2rem));margin:auto}
+.masthead{background:#102939;color:#fff;padding:1.1rem 0}.masthead .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.brand{font-weight:850;letter-spacing:.08em;white-space:nowrap}.brand span{color:#a9f0d9;margin:0 .35rem}
+.course{font-size:.88rem;color:#dbece8;text-align:right}.course strong{display:block;color:#fff}
+.selector{position:sticky;top:0;z-index:8;background:#f5f7f6;border-bottom:1px solid #cbdcd5;padding:.65rem 0}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
+.tabs a{display:block;min-height:65px;padding:.65rem 1rem;border:1px solid #c4d8d0;border-radius:13px;background:#fff;color:#13273a;text-decoration:none;line-height:1.25}
+.tabs a strong{display:block;font-size:.98rem}.tabs a span{display:block;font-size:.8rem;color:#4a5e6d;margin-top:.25rem}
+.tabs a:hover{border-color:#00635d;background:#e7f6f0}
+.tabs a[aria-current="page"]{background:#d9f9ed;border-color:#00635d;box-shadow:inset 3px 0 #00635d}
+.tabs a:focus-visible,.skip:focus-visible{outline:3px solid #00635d;outline-offset:3px}
+.skip{position:absolute;top:-5rem;left:1rem;z-index:12;padding:.7rem;background:#fff;color:#00635d}
+.skip:focus{top:.5rem}.day{scroll-margin-top:100px}iframe{display:block;width:100%;height:1000px;border:0;background:#f5f7f6}
+[hidden]{display:none!important}.bottom{padding:.8rem 1rem;font-size:.78rem;text-align:center;color:#4a5e6d}
+noscript p{padding:1rem;margin:0;background:#fff0cc}
+@media(max-width:600px){.course{font-size:.72rem}.brand{font-size:.85rem}.tabs a{padding:.6rem .7rem;min-height:72px}.tabs a strong{font-size:.88rem}.tabs a span{font-size:.72rem}.masthead{padding:.8rem 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#jornadas">Saltar al selector de jornada</a>
+<header class="masthead"><div class="wrap"><div class="brand">AITIC <span>/</span> AEPV</div><div class="course"><strong>Crea tu asistente de IA para tareas repetitivas</strong>10 y 12 de noviembre de 2026 · 6 horas<br><span style="color:#a9f0d9">Revisión 12 nov · Rutas individuales</span></div></div></header>
+<nav id="jornadas" class="selector" aria-label="Elegir jornada"><div class="wrap tabs">
+<a id="tab-1" href="#jornada1" aria-controls="jornada1"><strong>Jornada 1 · Empieza tu Proyecto</strong><span>Martes 10 · Cuenta, método y primera práctica</span></a>
+<a id="tab-2" href="#jornada2" aria-controls="jornada2"><strong>Jornada 2 · Hazlo útil y reutilizable</strong><span>Jueves 12 · Tu ruta, instrucciones y conexiones</span></a>
+</div></nav>
+<noscript><p>Las dos jornadas se muestran seguidas. Cada recuadro permite desplazarte por su contenido.</p></noscript>
+<main id="aula">
+<section class="day" id="jornada1" aria-labelledby="tab-1"><iframe id="frame-1" title="Jornada 1 del taller de asistentes de IA" allow="clipboard-write" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Aula de la sesión 1 del taller AEPV y AITIC. Aprende a crear un Proyecto de ChatGPT para una tarea repetitiva.&quot;&gt;
+&lt;title&gt;Sesión 1 · Tu primer Proyecto de trabajo con IA | AEPV y AITIC&lt;/title&gt;
+&lt;style&gt;
 :root{color-scheme:light;--ink:#13273a;--muted:#4a5e6d;--paper:#f5f7f6;--white:#fff;--line:#d6e2e1;--teal:#00635d;--mint:#d9f9ed;--navy:#102939;--amber:#f9d995;--radius:21px;--max:1120px;scroll-padding-top:5.5rem}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.58 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.58 system-ui,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,sans-serif}
 a{color:var(--teal);text-underline-offset:.18em}
 button,textarea,input{font:inherit}
 button{cursor:pointer}
@@ -83,7 +120,7 @@ summary::marker{color:var(--teal)}
 .letters p{margin:0;font-size:.89rem;color:var(--muted)}
 .steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1rem 0;padding:0;list-style:none;counter-reset:step}
 .step{counter-increment:step}
-.step h3::before{content:"0" counter(step) "  ";font-size:.85rem;color:var(--teal);margin-right:.25rem}
+.step h3::before{content:&quot;0&quot; counter(step) &quot;  &quot;;font-size:.85rem;color:var(--teal);margin-right:.25rem}
 .scratch{margin-top:1rem}
 .scratch label{display:block;font-weight:750;margin-top:.65rem}
 .scratch textarea{display:block;width:100%;resize:vertical;min-height:4.3rem;margin:.35rem 0 .7rem;border:1px solid #879e9a;border-radius:10px;padding:.65rem;color:var(--ink);background:#fbfdfc}
@@ -102,147 +139,147 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 1rem;padding:0;
 @media(max-width:650px){:root{scroll-padding-top:6.5rem}.wrap{width:calc(100% - 1.75rem)}.hero .wrap,.duo,.traffic,.steps,.pills{grid-template-columns:1fr}.hero .wrap{gap:1.35rem}.hero h1{text-wrap:initial}.route{padding:.8rem}.route li{padding:.48rem}.nav ul{gap:.08rem .5rem}.nav a{min-height:35px;font-size:.81rem}.letters{grid-template-columns:repeat(2,minmax(0,1fr))}.status{display:block;margin:.45rem 0 0}.topnote{font-size:.72rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{body,.hero,.card,.prompt,.step,.finish,.scratch{background:#fff;color:#111}.nav,.actions,.copy,.route,.skip,.status{display:none!important}.hero{border:0}.hero .wrap{display:block;padding-block:.5rem}.hero .lead,.hero .date,.hero h1 span,.kicker{color:#222}.top{background:#fff;color:#111}.topnote,.identity span{color:#111}.wrap{width:100%}main{padding-block:1rem}main section+section{margin-top:1.3rem}.prompt,details,.card,.step,.finish{break-inside:avoid}}
-</style>
-</head>
-<body>
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header>
-  <div class="top"><div class="wrap">
-    <div class="identity" aria-label="AITIC y AEPV">AITIC <span aria-hidden="true">/</span> AEPV</div>
-    <div class="topnote">Curso 1 · Asistentes para tareas repetitivas</div>
-  </div></div>
-  <div class="hero"><div class="wrap">
-    <div>
-      <p class="kicker">Taller práctico · Sesión 1 de 2</p>
-      <h1>Tu primer Proyecto <span>de trabajo con IA</span></h1>
-      <p class="lead">Trae una tarea que repites. Hoy la harás en un Proyecto de ChatGPT y comprobarás si el resultado te sirve.</p>
-      <p class="date"><time datetime="2026-11-10T09:30:00+01:00">Martes 10 de noviembre de 2026</time> · 9:30–12:30</p>
-      <div class="actions"><a class="button primary" href="#prepara">Empezar la sesión <span aria-hidden="true">&nbsp;↓</span></a><a class="button ghost" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Abrir ChatGPT <span aria-hidden="true">&nbsp;↗</span></a></div>
-    </div>
-    <aside class="route" aria-label="Recorrido de hoy">
-      <p>Recorrido de hoy</p>
-      <ol>
-        <li><span>01</span><div><strong>Prepara</strong><small>Cuenta, datos y una chuleta breve</small></div></li>
-        <li><span>02</span><div><strong>Construye</strong><small>Tu tarea, tu Proyecto y tu primer encargo</small></div></li>
-        <li><span>03</span><div><strong>Prueba</strong><small>Comprueba una respuesta y corrígela</small></div></li>
-      </ol>
-    </aside>
-  </div></div>
-</header>
-<nav class="nav" aria-label="Contenido de la sesión"><div class="wrap"><ul>
-  <li><a href="#prepara">Preparación</a></li><li><a href="#metodo">OCDTF</a></li><li><a href="#datos">Datos</a></li><li><a href="#proyecto">Proyecto</a></li><li><a href="#prueba">Revisión</a></li>
-</ul></div></nav>
-<main id="contenido" class="wrap">
-<section id="prepara" aria-labelledby="titulo-prepara">
-  <p class="overline">01 / Antes de empezar</p>
-  <h2 id="titulo-prepara">Prepara tu cuenta</h2>
-  <p class="intro">Entra en ChatGPT con una cuenta autorizada para el uso que vas a hacer. Si ya tienes una ficha profesional, recupera lo que te sirva. Si empiezas de cero, usa la entrevista.</p>
-  <div class="duo">
-    <article class="card"><h3>Personalización general</h3><p>En <strong>Configuración → Personalización</strong> puedes revisar tus instrucciones generales. Ahí van tus preferencias para el trabajo habitual, como el idioma o el tipo de respuesta que te resulta útil.</p></article>
-    <article class="card"><h3>Memoria y ficha profesional</h3><p>Si la memoria está disponible, decide qué contexto general quieres que recuerde. Guarda la ficha completa en un archivo propio y lleva a cada Proyecto solo la parte que necesite para su tarea.</p></article>
-  </div>
-  <article class="prompt">
-    <p class="overline">Entrevista 1 · Opcional</p>
-    <h3>Prepara tu ficha profesional</h3>
-    <p class="where">Pégala en un chat general. Responde a cada pregunta con tus palabras. Revisa el borrador antes de usarlo en Personalización.</p>
-    <details><summary>Ver el texto de la entrevista profesional</summary>
-      <pre id="prompt-perfil">Ayúdame a preparar una ficha breve de mi perfil profesional para trabajar con IA. Hazme cinco preguntas, una por mensaje, y espera mi respuesta antes de seguir:
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a class=&quot;skip&quot; href=&quot;#contenido&quot;&gt;Saltar al contenido&lt;/a&gt;
+&lt;header&gt;
+  &lt;div class=&quot;top&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;
+    &lt;div class=&quot;identity&quot; aria-label=&quot;AITIC y AEPV&quot;&gt;AITIC &lt;span aria-hidden=&quot;true&quot;&gt;/&lt;/span&gt; AEPV&lt;/div&gt;
+    &lt;div class=&quot;topnote&quot;&gt;Curso 1 · Asistentes para tareas repetitivas&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;hero&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;kicker&quot;&gt;Taller práctico · Sesión 1 de 2&lt;/p&gt;
+      &lt;h1&gt;Tu primer Proyecto &lt;span&gt;de trabajo con IA&lt;/span&gt;&lt;/h1&gt;
+      &lt;p class=&quot;lead&quot;&gt;Trae una tarea que repites. Hoy la harás en un Proyecto de ChatGPT y comprobarás si el resultado te sirve.&lt;/p&gt;
+      &lt;p class=&quot;date&quot;&gt;&lt;time datetime=&quot;2026-11-10T09:30:00+01:00&quot;&gt;Martes 10 de noviembre de 2026&lt;/time&gt; · 9:30–12:30&lt;/p&gt;
+      &lt;div class=&quot;actions&quot;&gt;&lt;a class=&quot;button primary&quot; href=&quot;#prepara&quot;&gt;Empezar la sesión &lt;span aria-hidden=&quot;true&quot;&gt;&amp;nbsp;↓&lt;/span&gt;&lt;/a&gt;&lt;a class=&quot;button ghost&quot; href=&quot;https://chatgpt.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Abrir ChatGPT &lt;span aria-hidden=&quot;true&quot;&gt;&amp;nbsp;↗&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;aside class=&quot;route&quot; aria-label=&quot;Recorrido de hoy&quot;&gt;
+      &lt;p&gt;Recorrido de hoy&lt;/p&gt;
+      &lt;ol&gt;
+        &lt;li&gt;&lt;span&gt;01&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Prepara&lt;/strong&gt;&lt;small&gt;Cuenta, datos y una chuleta breve&lt;/small&gt;&lt;/div&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;02&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Construye&lt;/strong&gt;&lt;small&gt;Tu tarea, tu Proyecto y tu primer encargo&lt;/small&gt;&lt;/div&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;03&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Prueba&lt;/strong&gt;&lt;small&gt;Comprueba una respuesta y corrígela&lt;/small&gt;&lt;/div&gt;&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/aside&gt;
+  &lt;/div&gt;&lt;/div&gt;
+&lt;/header&gt;
+&lt;nav class=&quot;nav&quot; aria-label=&quot;Contenido de la sesión&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#prepara&quot;&gt;Preparación&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#metodo&quot;&gt;OCDTF&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#datos&quot;&gt;Datos&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#proyecto&quot;&gt;Proyecto&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#prueba&quot;&gt;Revisión&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;
+&lt;main id=&quot;contenido&quot; class=&quot;wrap&quot;&gt;
+&lt;section id=&quot;prepara&quot; aria-labelledby=&quot;titulo-prepara&quot;&gt;
+  &lt;p class=&quot;overline&quot;&gt;01 / Antes de empezar&lt;/p&gt;
+  &lt;h2 id=&quot;titulo-prepara&quot;&gt;Prepara tu cuenta&lt;/h2&gt;
+  &lt;p class=&quot;intro&quot;&gt;Entra en ChatGPT con una cuenta autorizada para el uso que vas a hacer. Si ya tienes una ficha profesional, recupera lo que te sirva. Si empiezas de cero, usa la entrevista.&lt;/p&gt;
+  &lt;div class=&quot;duo&quot;&gt;
+    &lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Personalización general&lt;/h3&gt;&lt;p&gt;En &lt;strong&gt;Configuración → Personalización&lt;/strong&gt; puedes revisar tus instrucciones generales. Ahí van tus preferencias para el trabajo habitual, como el idioma o el tipo de respuesta que te resulta útil.&lt;/p&gt;&lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;&lt;h3&gt;Memoria y ficha profesional&lt;/h3&gt;&lt;p&gt;Si la memoria está disponible, decide qué contexto general quieres que recuerde. Guarda la ficha completa en un archivo propio y lleva a cada Proyecto solo la parte que necesite para su tarea.&lt;/p&gt;&lt;/article&gt;
+  &lt;/div&gt;
+  &lt;article class=&quot;prompt&quot;&gt;
+    &lt;p class=&quot;overline&quot;&gt;Entrevista 1 · Opcional&lt;/p&gt;
+    &lt;h3&gt;Prepara tu ficha profesional&lt;/h3&gt;
+    &lt;p class=&quot;where&quot;&gt;Pégala en un chat general. Responde a cada pregunta con tus palabras. Revisa el borrador antes de usarlo en Personalización.&lt;/p&gt;
+    &lt;details&gt;&lt;summary&gt;Ver el texto de la entrevista profesional&lt;/summary&gt;
+      &lt;pre id=&quot;prompt-perfil&quot;&gt;Ayúdame a preparar una ficha breve de mi perfil profesional para trabajar con IA. Hazme cinco preguntas, una por mensaje, y espera mi respuesta antes de seguir:
 1. ¿Qué función desempeño y qué tipo de trabajo hago?
 2. ¿Qué tareas hago con más frecuencia?
 3. ¿Cuál de ellas me gustaría agilizar y por qué?
 4. ¿Qué información o documentos suelo usar? Pídeme solo tipos de documentos.
 5. ¿Cómo prefiero que me respondas y qué necesito verificar antes de usar una respuesta?
 Si falta un dato esencial, haz una sola repregunta breve. Si me cuesta responder, dame ejemplos genéricos y espera a que elija o escriba el mío. Usa solo lo que confirme. Evita nombres reales, credenciales y datos confidenciales.
-Al terminar, prepara una ficha breve con lo confirmado y, en un bloque aparte, un borrador de instrucciones personalizadas generales en primera persona, de hasta 900 caracteres. Pídeme que lo revise antes de usarlo. Deja cualquier cambio de ajustes o memoria para mi decisión.</pre>
-      <button class="button copy" type="button" data-copy="prompt-perfil" aria-label="Copiar entrevista profesional" hidden>Copiar entrevista</button><span class="status" role="status"></span>
-    </details>
-  </article>
-</section>
-<section id="metodo" aria-labelledby="titulo-metodo">
-  <p class="overline">Chuleta para escribir o dictar</p>
-  <h2 id="titulo-metodo">Método OCDTF</h2>
-  <p class="intro">Empieza por el resultado que quieres obtener. Usa las demás preguntas para explicar lo que todavía falte.</p>
-  <ul class="letters"><li><span class="letter">O</span><div><strong>Objetivo</strong><p>¿Qué resultado necesito y para quién?</p></div></li><li><span class="letter">C</span><div><strong>Contexto</strong><p>¿Qué necesita saber para entender la situación?</p></div></li><li><span class="letter">D</span><div><strong>Datos</strong><p>¿Qué información o fuente debe usar?</p></div></li><li><span class="letter">T</span><div><strong>Tono</strong><p>¿Cómo debe sonar para quien va a leerlo?</p></div></li><li><span class="letter">F</span><div><strong>Formato</strong><p>¿En qué forma y con qué extensión lo necesito?</p></div></li></ul>
-</section>
-<section id="datos" aria-labelledby="titulo-datos">
-  <p class="overline">Antes de adjuntar o pegar</p>
-  <h2 id="titulo-datos">Semáforo de datos</h2>
-  <div class="traffic">
-    <article class="card"><span class="cap green">Verde · Puedes practicar</span><h3>Datos seguros para el aula</h3><p>Usa ejemplos ficticios, plantillas vacías o información pública autorizada.</p></article>
-    <article class="card"><span class="cap yellow">Amarillo · Comprueba</span><h3>Información interna</h3><p>Confirma el permiso y la cuenta autorizada. Reduce la información a lo necesario y anonimiza cuando corresponda.</p></article>
-    <article class="card"><span class="cap red">Rojo · Deja fuera</span><h3>Datos sensibles</h3><p>Deja fuera las credenciales, los datos sensibles y el material confidencial sin autorización.</p></article>
-  </div>
-  <p class="revision"><strong>Revisión humana.</strong> Comprueba fechas, cifras y compromisos con el original. La persona responsable valida la salida antes de usarla o enviarla.</p>
-</section>
-<section id="proyecto" aria-labelledby="titulo-proyecto">
-  <p class="overline">02 / Trabajo en tu puesto</p>
-  <h2 id="titulo-proyecto">Construye tu Proyecto</h2>
-  <p class="intro">Empieza con una tarea que puedas explicar en una frase y una salida que sepas revisar. Las instrucciones del Proyecto vendrán de lo que aprendas al hacerla.</p>
-  <ol class="steps">
-    <li class="step"><h3>Crea el espacio</h3><p>En la barra lateral de ChatGPT, elige <strong>Nuevo proyecto</strong>. Dale un nombre que describa la tarea y abre su primer chat.</p></li>
-    <li class="step"><h3>Cuenta qué haces</h3><p>Explica tu tarea con tus palabras. Si te cuesta decidir por dónde empezar, usa la entrevista de abajo dentro del Proyecto.</p></li>
-    <li class="step"><h3>Reúne lo imprescindible</h3><p>Prepara un caso ficticio o autorizado. Añade solo la nota, plantilla o fragmento que ayude. Indica qué documento debe servir de referencia.</p></li>
-    <li class="step"><h3>Haz el primer encargo</h3><p>Escribe qué resultado necesitas para ese caso. Si dudas, vuelve a la chuleta OCDTF y completa lo que falte.</p></li>
-  </ol>
-  <article class="prompt">
-    <p class="overline">Entrevista 2 · En tu Proyecto</p>
-    <h3>Define la tarea que vas a repetir</h3>
-    <p class="where">Al pegarla, la primera pregunta te pedirá que expliques la tarea en una frase. Después de revisar la ficha, escribe tu primer encargo.</p>
-    <details><summary>Ver el texto de la entrevista del Proyecto</summary>
-      <pre id="prompt-proyecto">Ayúdame a definir una tarea repetitiva para este Proyecto. Empieza pidiéndome que la explique en una frase con mis palabras y espera mi respuesta. Después hazme hasta cuatro preguntas, una por mensaje, sobre lo que falte:
+Al terminar, prepara una ficha breve con lo confirmado y, en un bloque aparte, un borrador de instrucciones personalizadas generales en primera persona, de hasta 900 caracteres. Pídeme que lo revise antes de usarlo. Deja cualquier cambio de ajustes o memoria para mi decisión.&lt;/pre&gt;
+      &lt;button class=&quot;button copy&quot; type=&quot;button&quot; data-copy=&quot;prompt-perfil&quot; aria-label=&quot;Copiar entrevista profesional&quot; hidden&gt;Copiar entrevista&lt;/button&gt;&lt;span class=&quot;status&quot; role=&quot;status&quot;&gt;&lt;/span&gt;
+    &lt;/details&gt;
+  &lt;/article&gt;
+&lt;/section&gt;
+&lt;section id=&quot;metodo&quot; aria-labelledby=&quot;titulo-metodo&quot;&gt;
+  &lt;p class=&quot;overline&quot;&gt;Chuleta para escribir o dictar&lt;/p&gt;
+  &lt;h2 id=&quot;titulo-metodo&quot;&gt;Método OCDTF&lt;/h2&gt;
+  &lt;p class=&quot;intro&quot;&gt;Empieza por el resultado que quieres obtener. Usa las demás preguntas para explicar lo que todavía falte.&lt;/p&gt;
+  &lt;ul class=&quot;letters&quot;&gt;&lt;li&gt;&lt;span class=&quot;letter&quot;&gt;O&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Objetivo&lt;/strong&gt;&lt;p&gt;¿Qué resultado necesito y para quién?&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;letter&quot;&gt;C&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Contexto&lt;/strong&gt;&lt;p&gt;¿Qué necesita saber para entender la situación?&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;letter&quot;&gt;D&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Datos&lt;/strong&gt;&lt;p&gt;¿Qué información o fuente debe usar?&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;letter&quot;&gt;T&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Tono&lt;/strong&gt;&lt;p&gt;¿Cómo debe sonar para quien va a leerlo?&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;letter&quot;&gt;F&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Formato&lt;/strong&gt;&lt;p&gt;¿En qué forma y con qué extensión lo necesito?&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id=&quot;datos&quot; aria-labelledby=&quot;titulo-datos&quot;&gt;
+  &lt;p class=&quot;overline&quot;&gt;Antes de adjuntar o pegar&lt;/p&gt;
+  &lt;h2 id=&quot;titulo-datos&quot;&gt;Semáforo de datos&lt;/h2&gt;
+  &lt;div class=&quot;traffic&quot;&gt;
+    &lt;article class=&quot;card&quot;&gt;&lt;span class=&quot;cap green&quot;&gt;Verde · Puedes practicar&lt;/span&gt;&lt;h3&gt;Datos seguros para el aula&lt;/h3&gt;&lt;p&gt;Usa ejemplos ficticios, plantillas vacías o información pública autorizada.&lt;/p&gt;&lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;&lt;span class=&quot;cap yellow&quot;&gt;Amarillo · Comprueba&lt;/span&gt;&lt;h3&gt;Información interna&lt;/h3&gt;&lt;p&gt;Confirma el permiso y la cuenta autorizada. Reduce la información a lo necesario y anonimiza cuando corresponda.&lt;/p&gt;&lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;&lt;span class=&quot;cap red&quot;&gt;Rojo · Deja fuera&lt;/span&gt;&lt;h3&gt;Datos sensibles&lt;/h3&gt;&lt;p&gt;Deja fuera las credenciales, los datos sensibles y el material confidencial sin autorización.&lt;/p&gt;&lt;/article&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;revision&quot;&gt;&lt;strong&gt;Revisión humana.&lt;/strong&gt; Comprueba fechas, cifras y compromisos con el original. La persona responsable valida la salida antes de usarla o enviarla.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id=&quot;proyecto&quot; aria-labelledby=&quot;titulo-proyecto&quot;&gt;
+  &lt;p class=&quot;overline&quot;&gt;02 / Trabajo en tu puesto&lt;/p&gt;
+  &lt;h2 id=&quot;titulo-proyecto&quot;&gt;Construye tu Proyecto&lt;/h2&gt;
+  &lt;p class=&quot;intro&quot;&gt;Empieza con una tarea que puedas explicar en una frase y una salida que sepas revisar. Las instrucciones del Proyecto vendrán de lo que aprendas al hacerla.&lt;/p&gt;
+  &lt;ol class=&quot;steps&quot;&gt;
+    &lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Crea el espacio&lt;/h3&gt;&lt;p&gt;En la barra lateral de ChatGPT, elige &lt;strong&gt;Nuevo proyecto&lt;/strong&gt;. Dale un nombre que describa la tarea y abre su primer chat.&lt;/p&gt;&lt;/li&gt;
+    &lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Cuenta qué haces&lt;/h3&gt;&lt;p&gt;Explica tu tarea con tus palabras. Si te cuesta decidir por dónde empezar, usa la entrevista de abajo dentro del Proyecto.&lt;/p&gt;&lt;/li&gt;
+    &lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Reúne lo imprescindible&lt;/h3&gt;&lt;p&gt;Prepara un caso ficticio o autorizado. Añade solo la nota, plantilla o fragmento que ayude. Indica qué documento debe servir de referencia.&lt;/p&gt;&lt;/li&gt;
+    &lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Haz el primer encargo&lt;/h3&gt;&lt;p&gt;Escribe qué resultado necesitas para ese caso. Si dudas, vuelve a la chuleta OCDTF y completa lo que falte.&lt;/p&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;article class=&quot;prompt&quot;&gt;
+    &lt;p class=&quot;overline&quot;&gt;Entrevista 2 · En tu Proyecto&lt;/p&gt;
+    &lt;h3&gt;Define la tarea que vas a repetir&lt;/h3&gt;
+    &lt;p class=&quot;where&quot;&gt;Al pegarla, la primera pregunta te pedirá que expliques la tarea en una frase. Después de revisar la ficha, escribe tu primer encargo.&lt;/p&gt;
+    &lt;details&gt;&lt;summary&gt;Ver el texto de la entrevista del Proyecto&lt;/summary&gt;
+      &lt;pre id=&quot;prompt-proyecto&quot;&gt;Ayúdame a definir una tarea repetitiva para este Proyecto. Empieza pidiéndome que la explique en una frase con mis palabras y espera mi respuesta. Después hazme hasta cuatro preguntas, una por mensaje, sobre lo que falte:
 1. ¿Qué resultado necesito, para quién y en qué formato?
 2. ¿Qué contexto y datos cambian cada vez que hago la tarea?
 3. ¿Qué fuente puedo aportar y qué regla debe respetar el resultado?
 4. ¿Qué comprobaré yo y qué debe quedar pendiente si faltan datos?
 Si mi tarea es demasiado amplia, pídeme que elija un solo resultado y espera mi decisión. Puedes dar pistas breves. Evita pedirme datos sensibles. Usa solo lo que yo confirme.
-Al final, resume lo acordado en una ficha corta de trabajo. Separa la tarea, los datos de cada caso, la fuente, la salida y la revisión humana. Pídeme que corrija la ficha y que escriba mi primer encargo. Espera a que yo aporte ese encargo y su entrada.</pre>
-      <button class="button copy" type="button" data-copy="prompt-proyecto" aria-label="Copiar entrevista del Proyecto" hidden>Copiar entrevista</button><span class="status" role="status"></span>
-    </details>
-  </article>
-  <div class="scratch">
-    <h3>Ordena tu idea antes de escribir</h3>
-    <p id="nota-ayuda">Apunta solo información ficticia o general. La página no envía ni guarda estas notas. Si quieres conservarlas, pásalas a tu propio cuaderno.</p>
-    <label for="tarea">Mi tarea en una frase</label>
-    <textarea id="tarea" rows="2" autocomplete="off" aria-describedby="nota-ayuda"></textarea>
-    <label for="salida">Qué necesito recibir y qué comprobaré</label>
-    <textarea id="salida" rows="2" autocomplete="off" aria-describedby="nota-ayuda"></textarea>
-  </div>
-</section>
-<section id="prueba" aria-labelledby="titulo-prueba">
-  <p class="overline">03 / Prueba y corrige</p>
-  <h2 id="titulo-prueba">Comprueba tu primera salida</h2>
-  <p class="intro">Abre la fuente y comprueba un dato importante. Si algo falla, señala el punto concreto, pide una corrección y vuelve a revisar ese dato.</p>
-  <div class="pills"><details><summary>Me he atascado</summary><p>«Explícame el siguiente paso en lenguaje sencillo. Dame un ejemplo corto y espera a que lo pruebe».</p></details><details><summary>Falta información</summary><p>«Si falta un dato que pueda cambiar la respuesta, hazme una pregunta concreta antes de seguir».</p></details><details><summary>Quiero comprobarlo</summary><p>«Señala en qué parte de la fuente te apoyas para esa afirmación. Marca lo que no puedas verificar».</p></details><details><summary>Quiero corregirlo</summary><p>«Cambia solo este punto, conserva los datos comprobados y dime qué has modificado».</p></details></div>
-  <p class="revision"><strong>Cuando te sirva para repetir.</strong> Guarda las reglas que hayan funcionado en las instrucciones del Proyecto. Deja la guía o plantilla entre las fuentes y lleva los datos de cada caso a su chat.</p>
-</section>
-<section class="finish" aria-labelledby="titulo-cierre">
-  <p class="overline">Cierre del martes</p>
-  <h2 id="titulo-cierre">Antes de salir</h2>
-  <ul>
-    <li><label><input type="checkbox" autocomplete="off"> He explicado mi tarea con mis palabras.</label></li>
-    <li><label><input type="checkbox" autocomplete="off"> He probado un primer encargo y revisado una parte de la respuesta.</label></li>
-    <li><label><input type="checkbox" autocomplete="off"> Sé qué entrada distinta voy a probar.</label></li>
-  </ul>
-  <p class="homework"><strong>Diez minutos antes del jueves.</strong> Abre otro chat del mismo Proyecto, prueba una entrada distinta y apunta qué tuviste que aclarar o corregir. Si aún no tienes acceso, trae una entrada ficticia y la salida que esperarías.</p>
-  <p>Nos vemos el <strong><time datetime="2026-11-12T09:30:00+01:00">jueves 12 de noviembre</time>, de 9:30 a 12:30</strong>.</p>
-</section>
-</main>
-<footer><div class="wrap">
-  <p><strong>AITIC y AEPV</strong> · Asistentes de IA para tareas repetitivas</p>
-  <ul aria-label="Ayuda oficial de OpenAI">
-    <li><a href="https://help.openai.com/es-419/articles/10169521-projects-in-chatgpt">Proyectos</a></li>
-    <li><a href="https://help.openai.com/es-es/articles/8096356-chatgpt-custom-instructions">Instrucciones personalizadas</a></li>
-    <li><a href="https://help.openai.com/es-es/articles/8590148-memory-in-chatgpt">Memoria</a></li>
-  </ul>
-</div></footer>
-<script>
+Al final, resume lo acordado en una ficha corta de trabajo. Separa la tarea, los datos de cada caso, la fuente, la salida y la revisión humana. Pídeme que corrija la ficha y que escriba mi primer encargo. Espera a que yo aporte ese encargo y su entrada.&lt;/pre&gt;
+      &lt;button class=&quot;button copy&quot; type=&quot;button&quot; data-copy=&quot;prompt-proyecto&quot; aria-label=&quot;Copiar entrevista del Proyecto&quot; hidden&gt;Copiar entrevista&lt;/button&gt;&lt;span class=&quot;status&quot; role=&quot;status&quot;&gt;&lt;/span&gt;
+    &lt;/details&gt;
+  &lt;/article&gt;
+  &lt;div class=&quot;scratch&quot;&gt;
+    &lt;h3&gt;Ordena tu idea antes de escribir&lt;/h3&gt;
+    &lt;p id=&quot;nota-ayuda&quot;&gt;Apunta solo información ficticia o general. La página no envía ni guarda estas notas. Si quieres conservarlas, pásalas a tu propio cuaderno.&lt;/p&gt;
+    &lt;label for=&quot;tarea&quot;&gt;Mi tarea en una frase&lt;/label&gt;
+    &lt;textarea id=&quot;tarea&quot; rows=&quot;2&quot; autocomplete=&quot;off&quot; aria-describedby=&quot;nota-ayuda&quot;&gt;&lt;/textarea&gt;
+    &lt;label for=&quot;salida&quot;&gt;Qué necesito recibir y qué comprobaré&lt;/label&gt;
+    &lt;textarea id=&quot;salida&quot; rows=&quot;2&quot; autocomplete=&quot;off&quot; aria-describedby=&quot;nota-ayuda&quot;&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section id=&quot;prueba&quot; aria-labelledby=&quot;titulo-prueba&quot;&gt;
+  &lt;p class=&quot;overline&quot;&gt;03 / Prueba y corrige&lt;/p&gt;
+  &lt;h2 id=&quot;titulo-prueba&quot;&gt;Comprueba tu primera salida&lt;/h2&gt;
+  &lt;p class=&quot;intro&quot;&gt;Abre la fuente y comprueba un dato importante. Si algo falla, señala el punto concreto, pide una corrección y vuelve a revisar ese dato.&lt;/p&gt;
+  &lt;div class=&quot;pills&quot;&gt;&lt;details&gt;&lt;summary&gt;Me he atascado&lt;/summary&gt;&lt;p&gt;«Explícame el siguiente paso en lenguaje sencillo. Dame un ejemplo corto y espera a que lo pruebe».&lt;/p&gt;&lt;/details&gt;&lt;details&gt;&lt;summary&gt;Falta información&lt;/summary&gt;&lt;p&gt;«Si falta un dato que pueda cambiar la respuesta, hazme una pregunta concreta antes de seguir».&lt;/p&gt;&lt;/details&gt;&lt;details&gt;&lt;summary&gt;Quiero comprobarlo&lt;/summary&gt;&lt;p&gt;«Señala en qué parte de la fuente te apoyas para esa afirmación. Marca lo que no puedas verificar».&lt;/p&gt;&lt;/details&gt;&lt;details&gt;&lt;summary&gt;Quiero corregirlo&lt;/summary&gt;&lt;p&gt;«Cambia solo este punto, conserva los datos comprobados y dime qué has modificado».&lt;/p&gt;&lt;/details&gt;&lt;/div&gt;
+  &lt;p class=&quot;revision&quot;&gt;&lt;strong&gt;Cuando te sirva para repetir.&lt;/strong&gt; Guarda las reglas que hayan funcionado en las instrucciones del Proyecto. Deja la guía o plantilla entre las fuentes y lleva los datos de cada caso a su chat.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class=&quot;finish&quot; aria-labelledby=&quot;titulo-cierre&quot;&gt;
+  &lt;p class=&quot;overline&quot;&gt;Cierre del martes&lt;/p&gt;
+  &lt;h2 id=&quot;titulo-cierre&quot;&gt;Antes de salir&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt; He explicado mi tarea con mis palabras.&lt;/label&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt; He probado un primer encargo y revisado una parte de la respuesta.&lt;/label&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt; Sé qué entrada distinta voy a probar.&lt;/label&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p class=&quot;homework&quot;&gt;&lt;strong&gt;Diez minutos antes del jueves.&lt;/strong&gt; Abre otro chat del mismo Proyecto, prueba una entrada distinta y apunta qué tuviste que aclarar o corregir. Si aún no tienes acceso, trae una entrada ficticia y la salida que esperarías.&lt;/p&gt;
+  &lt;p&gt;Nos vemos el &lt;strong&gt;&lt;time datetime=&quot;2026-11-12T09:30:00+01:00&quot;&gt;jueves 12 de noviembre&lt;/time&gt;, de 9:30 a 12:30&lt;/strong&gt;.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;&lt;div class=&quot;wrap&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;AITIC y AEPV&lt;/strong&gt; · Asistentes de IA para tareas repetitivas&lt;/p&gt;
+  &lt;ul aria-label=&quot;Ayuda oficial de OpenAI&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;https://help.openai.com/es-419/articles/10169521-projects-in-chatgpt&quot;&gt;Proyectos&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://help.openai.com/es-es/articles/8096356-chatgpt-custom-instructions&quot;&gt;Instrucciones personalizadas&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://help.openai.com/es-es/articles/8590148-memory-in-chatgpt&quot;&gt;Memoria&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;&lt;/footer&gt;
+&lt;script&gt;
   async function copyInterview(button) {
     const prompt = document.getElementById(button.dataset.copy);
     const status = button.nextElementSibling;
     try {
-      if (!navigator.clipboard?.writeText) throw new Error('Portapapeles no disponible');
+      if (!navigator.clipboard?.writeText) throw new Error(&#x27;Portapapeles no disponible&#x27;);
       await navigator.clipboard.writeText(prompt.textContent);
-      status.textContent = 'Copiada. Pégala en ChatGPT.';
+      status.textContent = &#x27;Copiada. Pégala en ChatGPT.&#x27;;
     } catch {
       const selection = window.getSelection();
       if (selection) {
@@ -250,17 +287,505 @@ Al final, resume lo acordado en una ficha corta de trabajo. Separa la tarea, los
         range.selectNodeContents(prompt);
         selection.removeAllRanges();
         selection.addRange(range);
-        status.textContent = 'Texto seleccionado. Usa la opción Copiar de tu dispositivo.';
+        status.textContent = &#x27;Texto seleccionado. Usa la opción Copiar de tu dispositivo.&#x27;;
       } else {
-        status.textContent = 'Selecciona el texto de arriba y cópialo manualmente.';
+        status.textContent = &#x27;Selecciona el texto de arriba y cópialo manualmente.&#x27;;
       }
     }
   }
 
-  document.querySelectorAll('[data-copy]').forEach(button => {
+  document.querySelectorAll(&#x27;[data-copy]&#x27;).forEach(button =&gt; {
     button.hidden = false;
-    button.addEventListener('click', () => copyInterview(button));
+    button.addEventListener(&#x27;click&#x27;, () =&gt; copyInterview(button));
   });
+&lt;/script&gt;
+
+&lt;style&gt;.top{display:none}.nav{position:static!important}.hero .wrap{padding-top:2rem;padding-bottom:2rem}html{scroll-behavior:auto}&lt;/style&gt;
+&lt;script&gt;
+(() =&gt; {
+  const day = 1;
+  let previousHeight = 0;
+  function reportHeight() {
+    const height = Math.ceil(document.body.getBoundingClientRect().height) + 4;
+    if (height !== previousHeight &amp;&amp; height &gt; 40) {
+      previousHeight = height;
+      parent.postMessage({type:&#x27;aepv-height&#x27;, day, height}, &#x27;*&#x27;);
+    }
+  }
+  const observer = new ResizeObserver(reportHeight);
+  observer.observe(document.body);
+  window.addEventListener(&#x27;load&#x27;, reportHeight);
+  window.addEventListener(&#x27;message&#x27;, event =&gt; {
+    if (event.source === parent &amp;&amp; event.data?.type === &#x27;aepv-measure&#x27;) {
+      previousHeight = 0;
+      reportHeight();
+    }
+  });
+  window.addEventListener(&#x27;resize&#x27;, reportHeight);
+  document.addEventListener(&#x27;toggle&#x27;, reportHeight, true);
+  document.addEventListener(&#x27;click&#x27;, event =&gt; {
+    const link = event.target.closest(&#x27;a[href^=&quot;#&quot;]&#x27;);
+    if (!link) return;
+    const target = document.getElementById(link.getAttribute(&#x27;href&#x27;).slice(1));
+    if (!target) return;
+    event.preventDefault();
+    requestAnimationFrame(() =&gt; {
+      reportHeight();
+      parent.postMessage({
+        type:&#x27;aepv-anchor&#x27;, day,
+        offset:target.getBoundingClientRect().top + window.scrollY
+      }, &#x27;*&#x27;);
+    });
+  });
+  reportHeight();
+})();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe></section>
+<section class="day" id="jornada2" aria-labelledby="tab-2"><iframe id="frame-2" title="Jornada 2 del taller de asistentes de IA" allow="clipboard-write" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Jornada 2 del taller AEPV y AITIC. Seis rutas para probar, revisar y mejorar tu Proyecto de trabajo con IA.&quot;&gt;
+&lt;title&gt;Jornada 2 · Pon a trabajar tu Proyecto | AEPV y AITIC&lt;/title&gt;
+&lt;style&gt;
+
+:root{color-scheme:light;--ink:#13273a;--muted:#4a5e6d;--paper:#f5f7f6;--white:#fff;--line:#d6e2e1;--teal:#00635d;--mint:#d9f9ed;--navy:#102939;--amber:#f9d995;--radius:21px;--max:1120px;scroll-padding-top:5.5rem}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.58 system-ui,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,sans-serif}
+a{color:var(--teal);text-underline-offset:.18em}
+button,textarea,input{font:inherit}
+button{cursor:pointer}
+a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid #128777;outline-offset:4px}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{line-height:1.12}
+h2{font-size:clamp(1.65rem,4vw,2.55rem);letter-spacing:-.045em;margin-bottom:.7rem}
+h3{font-size:1.12rem;margin-bottom:.55rem;letter-spacing:-.014em}
+p{margin-bottom:.85rem}
+.wrap{width:min(var(--max),100% - 2.5rem);margin-inline:auto}
+.skip{position:absolute;left:.75rem;top:-5rem;z-index:10;background:var(--white);padding:.5rem 1rem;border-radius:.5rem}
+.skip:focus{top:.5rem}
+.top{background:var(--navy);color:#fff}
+.top .wrap{min-height:65px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.identity{font-weight:800;letter-spacing:.075em;font-size:.97rem;white-space:nowrap}
+.identity span{color:#9de6d5;margin-inline:.32rem}
+.topnote{font-size:.84rem;color:#cfdfdf;text-align:right}
+.hero{color:#fff;background:radial-gradient(ellipse at 92% 15%,#1c544f 0%,transparent 53%),var(--navy);border-top:1px solid #35515c}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(1.5rem,6vw,5rem);align-items:center;padding-block:clamp(2.5rem,6vw,5rem)}
+.kicker,.overline{font-size:.77rem;letter-spacing:.14em;font-weight:850;text-transform:uppercase}
+.kicker{color:#9de6d5;margin-bottom:.8rem}
+.overline{color:var(--teal);margin-bottom:.5rem}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.25rem);line-height:.99;letter-spacing:-.075em;margin-bottom:1rem;text-wrap:balance}
+.hero h1 span{color:#a9f0d9}
+.hero .lead{font-size:clamp(1rem,2vw,1.17rem);color:#e1eded;max-width:32rem}
+.hero .date{color:#e1eded;font-size:.9rem;margin:1.15rem 0 .85rem}
+.actions{display:flex;flex-wrap:wrap;gap:.65rem}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid transparent;border-radius:11px;text-decoration:none;font-weight:750;padding:.5rem .85rem}
+.primary{background:#a9f0d9;color:#0e382e}
+.primary:hover{background:#cdf9e9}
+.ghost{color:#fff;border-color:#668386}
+.ghost:hover{background:#244754}
+.route{border:1px solid #567b7b;background:#173943;border-radius:var(--radius);padding:1.15rem}
+.route p{font-size:.78rem;font-weight:780;letter-spacing:.12em;color:#b6e6db;text-transform:uppercase;margin-bottom:.7rem}
+.route ol{list-style:none;display:grid;gap:.55rem;padding:0;margin:0}
+.route li{display:grid;grid-template-columns:2rem 1fr;gap:.65rem;align-items:center;background:#214650;border-radius:12px;padding:.65rem}
+.route li span{display:grid;place-items:center;background:#a9f0d9;color:#163d35;width:2rem;height:2rem;border-radius:8px;font-size:.76rem;font-weight:850}
+.route strong,.route small{display:block}
+.route small{color:#d4e6e3;font-size:.83rem}
+.nav{position:sticky;top:0;z-index:3;background:#fff;border-bottom:1px solid var(--line)}
+.nav ul{list-style:none;display:flex;gap:clamp(.4rem,3vw,2.1rem);flex-wrap:wrap;padding:.4rem 0;margin:0}
+.nav a{display:inline-flex;align-items:center;min-height:39px;padding:.15rem .23rem;color:var(--ink);font-weight:720;text-decoration:none;font-size:.86rem}
+.nav a:hover,.nav a:focus-visible{text-decoration:underline;color:var(--teal)}
+main{padding-block:clamp(1.8rem,5vw,3.7rem)}
+main section+section{margin-top:clamp(1.9rem,5vw,4rem)}
+.intro{max-width:44rem;color:var(--muted)}
+.duo,.traffic,.practice{display:grid;gap:1rem}
+.duo,.practice{grid-template-columns:repeat(2,minmax(0,1fr))}
+.traffic{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card,.prompt,.scratch,.finish,.step{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1rem,2.5vw,1.5rem);min-width:0}
+.card p:last-child,.step p:last-child,.scratch p:last-child,.finish p:last-child{margin-bottom:0}
+.card p,.step p,.scratch p,.finish p{color:var(--muted)}
+.card .cap{display:inline-block;font-weight:780;font-size:.75rem;padding:.2rem .57rem;border-radius:99px;margin-bottom:.65rem}
+.green{background:#dff3e9;color:#15493d}
+.yellow{background:#ffedc6;color:#624611}
+.red{background:#fbe3e0;color:#782b25}
+.revision{margin:1rem 0 0;border-left:4px solid #087768;background:#e8f5f2;padding:.8rem 1rem;border-radius:0 12px 12px 0;color:var(--ink)}
+.prompt{margin-top:1rem;background:#edf6f3}
+.prompt .where{color:var(--muted);margin-bottom:.65rem}
+details{color:var(--ink)}
+summary{min-height:44px;padding:.58rem .2rem;font-weight:750;cursor:pointer;list-style-position:inside}
+summary::marker{color:var(--teal)}
+.prompt pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:.94rem;background:#fff;border:1px solid #d1e1dc;border-radius:12px;padding:1rem;margin:.4rem 0 .85rem}
+.copy{background:var(--teal);color:#fff}
+.copy:hover{background:#004c47}
+[hidden]{display:none!important}
+.status{font-size:.86rem;color:var(--teal);margin-left:.5rem}
+.letters{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.65rem;padding:0;margin:1.1rem 0}
+.letters li{background:#fff;border:1px solid var(--line);border-radius:15px;padding:.8rem}
+.letter{display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:8px;background:var(--mint);color:#12493e;font-size:1.25rem;font-weight:850;margin-bottom:.45rem}
+.letters p{margin:0;font-size:.89rem;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1rem 0;padding:0;list-style:none;counter-reset:step}
+.step{counter-increment:step}
+.step h3::before{content:&quot;0&quot; counter(step) &quot;  &quot;;font-size:.85rem;color:var(--teal);margin-right:.25rem}
+.scratch{margin-top:1rem}
+.scratch label{display:block;font-weight:750;margin-top:.65rem}
+.scratch textarea{display:block;width:100%;resize:vertical;min-height:4.3rem;margin:.35rem 0 .7rem;border:1px solid #879e9a;border-radius:10px;padding:.65rem;color:var(--ink);background:#fbfdfc}
+.pills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.pills details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:.3rem .85rem}
+.pills details p{color:var(--muted);padding:0 .2rem}
+.finish{background:#e2f4ee;border-color:#b9dacf}
+.finish ul{list-style:none;margin:.7rem 0 1rem;padding:0}
+.finish label{display:flex;align-items:baseline;gap:.6rem;padding:.27rem 0}
+.finish input{accent-color:var(--teal);min-width:1.1rem;min-height:1.1rem;align-self:flex-start;margin:.25rem 0 0}
+.finish .homework{border-top:1px solid #b9dacf;padding-top:.9rem}
+footer{background:#e8eeed;border-top:1px solid var(--line);padding:1.2rem 0;color:var(--muted);font-size:.88rem}
+footer p{margin:0}
+footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 1rem;padding:0;margin:.45rem 0 0}
+@media(max-width:800px){.letters{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){:root{scroll-padding-top:6.5rem}.wrap{width:calc(100% - 1.75rem)}.hero .wrap,.duo,.traffic,.steps,.pills{grid-template-columns:1fr}.hero .wrap{gap:1.35rem}.hero h1{text-wrap:initial}.route{padding:.8rem}.route li{padding:.48rem}.nav ul{gap:.08rem .5rem}.nav a{min-height:35px;font-size:.81rem}.letters{grid-template-columns:repeat(2,minmax(0,1fr))}.status{display:block;margin:.45rem 0 0}.topnote{font-size:.72rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body,.hero,.card,.prompt,.step,.finish,.scratch{background:#fff;color:#111}.nav,.actions,.copy,.route,.skip,.status{display:none!important}.hero{border:0}.hero .wrap{display:block;padding-block:.5rem}.hero .lead,.hero .date,.hero h1 span,.kicker{color:#222}.top{background:#fff;color:#111}.topnote,.identity span{color:#111}.wrap{width:100%}main{padding-block:1rem}main section+section{margin-top:1.3rem}.prompt,details,.card,.step,.finish{break-inside:avoid}}
+
+.hero .wrap{display:block;padding-block:3.5rem}.hero h1{max-width:920px;font-size:clamp(2.4rem,6.2vw,4.7rem)}.hero .lead{max-width:750px}
+.selection{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1.2rem 0}
+.selection a{background:#fff;border:1px solid var(--line);padding:.9rem 1rem;border-radius:14px;text-decoration:none;font-weight:850;font-size:1.08rem;color:var(--ink);min-height:84px}
+.selection a span{display:block;font-size:.85rem;font-weight:500;color:var(--muted);margin-top:.2rem}
+.selection a:hover{border-color:var(--teal);background:#e7f6f0}.selection a[aria-current=&quot;true&quot;]{border:2px solid var(--teal);background:#dff3e9;padding:calc(.9rem - 1px) calc(1rem - 1px)}
+.personal-route{scroll-margin-top:6rem}.personal-route+.personal-route{margin-top:2.3rem;border-top:1px solid var(--line);padding-top:1.6rem}
+.personal-route .steps{grid-template-columns:repeat(3,minmax(0,1fr))}.route-head{margin-bottom:1rem}.material{border-left:4px solid var(--teal)}
+.challenge{margin-top:1rem;background:#fff0cc;border:1px solid #ecd49a;padding:1.2rem 1.4rem;border-radius:var(--radius)}.challenge p{margin-bottom:0;color:#4f412b}
+.extension{margin-top:1rem;background:#edf6f3}.connection-steps{padding-left:1.3rem}.connection-steps li{margin-bottom:.65rem}.milestone{font-weight:750;color:var(--teal)}
+.advice{background:#fff;border:1px solid var(--line);border-radius:13px;margin-top:.7rem;padding:.3rem .85rem}.advice p{padding:.2rem .3rem .5rem;color:var(--muted)}
+#mensaje-ruta{font-weight:650;color:var(--muted)}.all-routes{border:1px solid #819994;color:var(--teal);background:#fff;margin-bottom:1rem;font-size:.88rem}
+.workflow{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;padding:0}.workflow li{background:#fff;border:1px solid var(--line);padding:1rem;border-radius:15px}.workflow strong{display:block;color:var(--teal);margin-bottom:.35rem}.workflow p{font-size:.94rem;color:var(--muted);margin:0}
+@media(max-width:800px){.personal-route .steps{grid-template-columns:1fr}.selection{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.hero .wrap{padding-block:2.3rem}.workflow{grid-template-columns:1fr}.selection a{font-size:1rem;padding:.75rem}.personal-route{scroll-margin-top:6.8rem}}
+@media print{.selection,.all-routes,#mensaje-ruta{display:none!important}.personal-route[hidden]{display:block!important}.personal-route{break-before:page}.personal-route .steps{grid-template-columns:1fr}.hero h1{font-size:2rem}}
+
+#outlook{display:none!important}body[data-person=&quot;jaime&quot;] #ruta-jaime #outlook{display:block!important}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a class=&quot;skip&quot; href=&quot;#contenido&quot;&gt;Saltar al contenido&lt;/a&gt;
+&lt;header&gt;
+&lt;div class=&quot;top&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;div class=&quot;identity&quot;&gt;AITIC &lt;span aria-hidden=&quot;true&quot;&gt;/&lt;/span&gt; AEPV&lt;/div&gt;&lt;div class=&quot;topnote&quot;&gt;Curso 1 · Asistentes para tareas repetitivas&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;hero&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;p class=&quot;kicker&quot;&gt;Taller práctico · Jornada 2 de 2&lt;/p&gt;&lt;h1&gt;Pon a trabajar &lt;span&gt;tu Proyecto&lt;/span&gt;&lt;/h1&gt;
+&lt;p class=&quot;lead&quot;&gt;Hoy vas a completar una tarea, revisar el resultado y probar qué ocurre con una entrada distinta. Elige tu ruta y termina con unas instrucciones propias y un siguiente paso para seguir usando lo aprendido.&lt;/p&gt;
+&lt;p class=&quot;date&quot;&gt;&lt;time datetime=&quot;2026-11-12T09:30:00+01:00&quot;&gt;Jueves 12 de noviembre de 2026&lt;/time&gt; · 9:30–12:30&lt;/p&gt;
+&lt;div class=&quot;actions&quot;&gt;&lt;a class=&quot;button primary&quot; href=&quot;#elegir&quot;&gt;Elegir mi ruta ↓&lt;/a&gt;&lt;a class=&quot;button ghost&quot; href=&quot;https://chatgpt.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Abrir ChatGPT ↗&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/header&gt;
+&lt;nav class=&quot;nav&quot; aria-label=&quot;Recorrido de la jornada&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#arranque&quot;&gt;Preparar&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#elegir&quot;&gt;Mi ruta&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#ayuda&quot;&gt;Si me atasco&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#instrucciones&quot;&gt;Guardar criterio&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#cierre&quot;&gt;Al terminar&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;
+&lt;main id=&quot;contenido&quot; class=&quot;wrap&quot;&gt;
+&lt;section id=&quot;arranque&quot; aria-labelledby=&quot;titulo-arranque&quot;&gt;&lt;p class=&quot;overline&quot;&gt;01 / Abre el trabajo del martes&lt;/p&gt;&lt;h2 id=&quot;titulo-arranque&quot;&gt;Empieza por una entrada pequeña&lt;/h2&gt;&lt;p class=&quot;intro&quot;&gt;Abre tu Proyecto y prepara el primer documento o caso. Decide qué necesitas recibir y qué dato comprobarás en el original.&lt;/p&gt;
+&lt;ol class=&quot;workflow&quot;&gt;&lt;li&gt;&lt;strong&gt;Haz la tarea&lt;/strong&gt;&lt;p&gt;Escribe el encargo con tus palabras y aporta lo imprescindible.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Comprueba la salida&lt;/strong&gt;&lt;p&gt;Localiza en la fuente el dato o criterio que sostiene una afirmación.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Repite y mejora&lt;/strong&gt;&lt;p&gt;Cambia la entrada, detecta una dificultad y ajusta una regla.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;p class=&quot;revision&quot;&gt;&lt;strong&gt;Antes de subir documentos.&lt;/strong&gt; Usa una cuenta autorizada y material que puedas aportar. Verde para datos ficticios o públicos autorizados. Amarillo para información interna con permiso, minimizada y anonimizada cuando proceda. Rojo para credenciales, datos sensibles y material confidencial sin autorización. La persona responsable revisa la salida antes de utilizarla.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id=&quot;elegir&quot; aria-labelledby=&quot;titulo-elegir&quot;&gt;&lt;p class=&quot;overline&quot;&gt;02 / Seis puntos de partida&lt;/p&gt;&lt;h2 id=&quot;titulo-elegir&quot;&gt;Elige tu nombre&lt;/h2&gt;&lt;p class=&quot;intro&quot;&gt;Encontrarás una guía para el proyecto que empezaste. Ajusta los campos y las comprobaciones a cómo trabajas tú. Si tu tarea ha cambiado, coméntalo con Diego.&lt;/p&gt;
+&lt;div class=&quot;selection&quot; aria-label=&quot;Rutas de los participantes&quot;&gt;&lt;a href=&quot;#ruta-nuria&quot; data-route=&quot;nuria&quot;&gt;Nuria&lt;span&gt;Facturas por obra&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#ruta-ana&quot; data-route=&quot;ana&quot;&gt;Ana&lt;span&gt;Referencias del cliente&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#ruta-paula&quot; data-route=&quot;paula&quot;&gt;Paula&lt;span&gt;Consumos de clientes&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#ruta-jaime&quot; data-route=&quot;jaime&quot;&gt;Jaime&lt;span&gt;Prioridades del correo&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#ruta-marina&quot; data-route=&quot;marina&quot;&gt;Marina&lt;span&gt;De actas a seguimiento&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#ruta-daniel&quot; data-route=&quot;daniel&quot;&gt;Daniel&lt;span&gt;Aprender el proceso&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p id=&quot;mensaje-ruta&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;Elige tu nombre para abrir tu guía de trabajo.&lt;/p&gt;
+&lt;div id=&quot;rutas&quot;&gt;&lt;article id=&quot;ruta-nuria&quot; class=&quot;personal-route&quot; aria-labelledby=&quot;nombre-nuria&quot;&gt;
+ &lt;div class=&quot;route-head&quot;&gt;&lt;p class=&quot;overline&quot;&gt;Ruta de trabajo · Nuria&lt;/p&gt;&lt;h2 id=&quot;nombre-nuria&quot;&gt;Facturas por obra&lt;/h2&gt;&lt;p class=&quot;intro&quot;&gt;Obtener el desglose de una factura por obras y comprobar que los importes cuadran.&lt;/p&gt;&lt;/div&gt;
+ &lt;div class=&quot;card material&quot;&gt;&lt;h3&gt;Prepara tu entrada&lt;/h3&gt;&lt;p&gt;Una factura representativa y la regla que usas para reconocer a qué obra pertenece cada línea. Si depende de los albaranes, prepara también los necesarios.&lt;/p&gt;&lt;/div&gt;
+ &lt;ol class=&quot;steps&quot;&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Elige una factura pequeña&lt;/h3&gt;&lt;p&gt;Explica qué dato te permite reconocer la obra. Decide qué importe quieres repartir y cómo tratarás impuestos, descuentos y gastos comunes.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Pide el desglose&lt;/h3&gt;&lt;p&gt;Escribe con tus palabras qué necesitas obtener. Conserva el número de factura, albarán, obra, concepto, importe y página de origen para poder revisarlo.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Comprueba antes de agrupar&lt;/h3&gt;&lt;p&gt;Revisa dos líneas con el original. Suma lo asignado y lo pendiente y contrástalo con el importe de referencia de la factura. Después agrupa por obra.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+ &lt;div class=&quot;duo&quot;&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Una salida útil&lt;/h3&gt;&lt;p&gt;Una tabla de líneas trazables y un resumen por obra. Las líneas sin asignación se mantienen visibles.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Cómo comprobarla&lt;/h3&gt;&lt;p&gt;¿Cada importe aparece una sola vez? ¿El reparto y las líneas pendientes cuadran con la base que elegiste? ¿Se han tratado aparte IVA y ajustes cuando corresponda?&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;challenge&quot;&gt;&lt;h3&gt;Prueba una dificultad&lt;/h3&gt;&lt;p&gt;Prueba una factura en la que una línea no indique la obra. Decide qué dato pedirías y comprueba que esa línea queda pendiente.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Qué conservar al terminar&lt;/summary&gt;&lt;p&gt;En las instrucciones, guarda cómo asignar obras y qué comprobar. En fuentes, el listado o la guía de códigos vigente. En cada chat, la factura y los albaranes de ese caso.&lt;/p&gt;&lt;/details&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Si ya puedes repetirlo&lt;/summary&gt;&lt;p&gt;Con la primera factura comprobada, prueba otra del mismo proveedor. Después podrás preparar un registro acumulado por obra, revisando posibles duplicados.&lt;/p&gt;&lt;/details&gt;
+ &lt;div class=&quot;card extension&quot;&gt;&lt;h3&gt;Recuperar facturas desde una carpeta&lt;/h3&gt;&lt;p&gt;Si las facturas ya están en Google Drive o SharePoint/OneDrive de empresa, prueba localizar una por nombre y periodo. Contrasta su número e importe antes de pedir el desglose. Conserva un registro de las ya procesadas para evitar repetirlas.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot; id=&quot;conexion-nuria&quot;&gt;&lt;summary&gt;Recupera una factura de tu carpeta&lt;/summary&gt;&lt;p&gt;Si ya guardáis las facturas y albaranes en Google Drive o SharePoint/OneDrive de empresa, conecta esa aplicación y pide una factura por proveedor, número y fecha. Abre el original, contrasta el importe y comprueba que los albaranes necesarios se han recuperado. Después aplica tu reparto por obras. Conserva factura e identificador en el registro para detectar duplicados.&lt;/p&gt;
+ &lt;ol class=&quot;connection-steps&quot;&gt;
+ &lt;li&gt;Busca Google Drive o SharePoint en Aplicaciones o Plugins de ChatGPT. Usa la cuenta autorizada que tenga acceso a tu documentación.&lt;/li&gt;
+ &lt;li&gt;Revisa los permisos. Si hace falta aprobación del administrador, anota qué aplicación y archivo necesitas consultar.&lt;/li&gt;
+ &lt;li&gt;En tu conversación, elige la aplicación y pide el documento por nombre, carpeta, fecha o enlace. Comprueba que ha leído el documento correcto.&lt;/li&gt;
+ &lt;li&gt;Contrasta un dato en la fuente antes de usar el resultado. Si quieres guardar una salida en la carpeta, prueba por separado la acción de escritura y abre el archivo creado.&lt;/li&gt;
+ &lt;/ol&gt;&lt;p&gt;La disponibilidad depende de tu cuenta y de los permisos de la organización. La recuperación del archivo y su escritura son capacidades que debes comprobar.&lt;/p&gt;
+ &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt&quot;&gt;Ayuda de Google Drive&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/12143177-sharepoint-app-and-setup-in-chatgpt&quot;&gt;Ayuda de SharePoint y OneDrive de empresa&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;
+ &lt;/article&gt;
+&lt;article id=&quot;ruta-ana&quot; class=&quot;personal-route&quot; aria-labelledby=&quot;nombre-ana&quot;&gt;
+ &lt;div class=&quot;route-head&quot;&gt;&lt;p class=&quot;overline&quot;&gt;Ruta de trabajo · Ana&lt;/p&gt;&lt;h2 id=&quot;nombre-ana&quot;&gt;Referencias del cliente&lt;/h2&gt;&lt;p class=&quot;intro&quot;&gt;Relacionar las referencias de un pedido con las referencias internas y dejar visibles las dudas.&lt;/p&gt;&lt;/div&gt;
+ &lt;div class=&quot;card material&quot;&gt;&lt;h3&gt;Prepara tu entrada&lt;/h3&gt;&lt;p&gt;Un pedido breve y una tabla de equivalencias autorizada. Debe identificar claramente la referencia del cliente y la referencia interna.&lt;/p&gt;&lt;/div&gt;
+ &lt;ol class=&quot;steps&quot;&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Revisa la tabla de equivalencias&lt;/h3&gt;&lt;p&gt;Indica qué columna identifica el artículo del cliente y cuál es la referencia interna. Comprueba si hay variantes, unidades o formatos de embalaje.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Trabaja con pocas líneas&lt;/h3&gt;&lt;p&gt;Escribe el encargo para cinco o diez líneas del pedido. Pide que conserve la referencia original, la interna, la descripción, la cantidad y el estado de revisión.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Contrasta una coincidencia y una duda&lt;/h3&gt;&lt;p&gt;Busca una referencia conocida en la tabla. Después comprueba una línea ambigua o ausente y decide qué necesita confirmar una persona.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+ &lt;div class=&quot;duo&quot;&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Una salida útil&lt;/h3&gt;&lt;p&gt;Una tabla de correspondencias que conserve las referencias de origen, las cantidades y las equivalencias pendientes.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Cómo comprobarla&lt;/h3&gt;&lt;p&gt;¿La coincidencia está respaldada por la tabla? ¿Se mantienen las unidades y variantes? ¿Se han señalado las referencias sin equivalencia?&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;challenge&quot;&gt;&lt;h3&gt;Prueba una dificultad&lt;/h3&gt;&lt;p&gt;Usa una referencia ausente o dos variantes parecidas. Comprueba que la salida conserva la duda para revisión.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Qué conservar al terminar&lt;/summary&gt;&lt;p&gt;En fuentes, la tabla de equivalencias con fecha o versión. En instrucciones, el criterio para coincidencias y dudas. En cada chat, el pedido recibido.&lt;/p&gt;&lt;/details&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Si ya puedes repetirlo&lt;/summary&gt;&lt;p&gt;Prueba un segundo pedido con la misma tabla. Si funciona, decide qué formato te facilita más trasladarlo al trabajo habitual.&lt;/p&gt;&lt;/details&gt;
+ &lt;div class=&quot;card extension&quot;&gt;&lt;h3&gt;Consultar la tabla vigente&lt;/h3&gt;&lt;p&gt;Si las equivalencias se mantienen en Drive o SharePoint, prueba abrir esa tabla mediante la conexión. Confirma el nombre, la versión y una referencia conocida antes de usarla con el siguiente pedido.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot; id=&quot;conexion-ana&quot;&gt;&lt;summary&gt;Trabaja con la tabla de equivalencias vigente&lt;/summary&gt;&lt;p&gt;Si la tabla está en Google Drive o SharePoint, conecta la aplicación y localízala por nombre o enlace. Comprueba versión, fecha y una equivalencia conocida. Después utiliza el pedido y esa tabla para obtener las correspondencias. Revisa si puedes leer el contenido completo y qué referencias han quedado pendientes.&lt;/p&gt;
+ &lt;ol class=&quot;connection-steps&quot;&gt;
+ &lt;li&gt;Busca Google Drive o SharePoint en Aplicaciones o Plugins de ChatGPT. Usa la cuenta autorizada que tenga acceso a tu documentación.&lt;/li&gt;
+ &lt;li&gt;Revisa los permisos. Si hace falta aprobación del administrador, anota qué aplicación y archivo necesitas consultar.&lt;/li&gt;
+ &lt;li&gt;En tu conversación, elige la aplicación y pide el documento por nombre, carpeta, fecha o enlace. Comprueba que ha leído el documento correcto.&lt;/li&gt;
+ &lt;li&gt;Contrasta un dato en la fuente antes de usar el resultado. Si quieres guardar una salida en la carpeta, prueba por separado la acción de escritura y abre el archivo creado.&lt;/li&gt;
+ &lt;/ol&gt;&lt;p&gt;La disponibilidad depende de tu cuenta y de los permisos de la organización. La recuperación del archivo y su escritura son capacidades que debes comprobar.&lt;/p&gt;
+ &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt&quot;&gt;Ayuda de Google Drive&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/12143177-sharepoint-app-and-setup-in-chatgpt&quot;&gt;Ayuda de SharePoint y OneDrive de empresa&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;
+ &lt;/article&gt;
+&lt;article id=&quot;ruta-paula&quot; class=&quot;personal-route&quot; aria-labelledby=&quot;nombre-paula&quot;&gt;
+ &lt;div class=&quot;route-head&quot;&gt;&lt;p class=&quot;overline&quot;&gt;Ruta de trabajo · Paula&lt;/p&gt;&lt;h2 id=&quot;nombre-paula&quot;&gt;Consumos de clientes&lt;/h2&gt;&lt;p class=&quot;intro&quot;&gt;Comparar consumos de un grupo pequeño de clientes con periodos y unidades equivalentes.&lt;/p&gt;&lt;/div&gt;
+ &lt;div class=&quot;card material&quot;&gt;&lt;h3&gt;Prepara tu entrada&lt;/h3&gt;&lt;p&gt;Un extracto autorizado con clientes identificados por código, fechas, cantidades y unidades. Decide si revisarás volumen o facturación.&lt;/p&gt;&lt;/div&gt;
+ &lt;ol class=&quot;steps&quot;&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Define una comparación concreta&lt;/h3&gt;&lt;p&gt;Elige dos periodos comparables y un solo grupo de clientes. Explica qué significa para ti subir, bajar o mantenerse.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Pide una tabla que puedas revisar&lt;/h3&gt;&lt;p&gt;Conserva código de cliente, valores de ambos periodos, unidad, diferencia y observación. Añade porcentaje solo cuando tenga sentido.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Comprueba tres clientes&lt;/h3&gt;&lt;p&gt;Contrasta un cliente con aumento, uno con descenso y otro con un dato ausente o una base cero. Revisa también que no haya registros duplicados.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+ &lt;div class=&quot;duo&quot;&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Una salida útil&lt;/h3&gt;&lt;p&gt;Una tabla de variaciones y una lista breve de clientes que conviene revisar, con la razón respaldada por los datos.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Cómo comprobarla&lt;/h3&gt;&lt;p&gt;¿Se comparan periodos completos y la misma unidad? ¿La clave de cliente es consistente? ¿Un cambio de precio podría explicar la variación del importe?&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;challenge&quot;&gt;&lt;h3&gt;Prueba una dificultad&lt;/h3&gt;&lt;p&gt;Prueba un cliente nuevo, un periodo incompleto o una fila sin unidad. Revisa que el resultado señale esa limitación antes de sacar conclusiones.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Qué conservar al terminar&lt;/summary&gt;&lt;p&gt;En instrucciones, la comparación, el criterio de clasificación y los controles. En fuentes, definiciones estables de campos o grupos. En cada chat, el extracto y el periodo de análisis.&lt;/p&gt;&lt;/details&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Si ya puedes repetirlo&lt;/summary&gt;&lt;p&gt;Cuando el extracto pequeño cuadre, amplía el grupo. Conserva las mismas comprobaciones antes de trabajar con todo el volumen.&lt;/p&gt;&lt;/details&gt;
+ &lt;div class=&quot;card extension&quot;&gt;&lt;h3&gt;Preparar una revisión periódica&lt;/h3&gt;&lt;p&gt;Si tus extractos están en Drive o SharePoint, localiza el archivo de un periodo concreto y comprueba sus fechas y unidades. Con el cálculo ya validado, podrás repetir la revisión mensual con el nuevo extracto y conservar un histórico.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot; id=&quot;conexion-paula&quot;&gt;&lt;summary&gt;Recupera el extracto del periodo que vas a comparar&lt;/summary&gt;&lt;p&gt;Si tus extractos están en Google Drive o SharePoint, conecta esa aplicación y localiza el archivo por grupo de clientes y periodo. Confirma fechas, unidad y columnas antes de calcular. Prueba la comparación con tres clientes y conserva el resultado del periodo antes de ampliar el volumen.&lt;/p&gt;
+ &lt;ol class=&quot;connection-steps&quot;&gt;
+ &lt;li&gt;Busca Google Drive o SharePoint en Aplicaciones o Plugins de ChatGPT. Usa la cuenta autorizada que tenga acceso a tu documentación.&lt;/li&gt;
+ &lt;li&gt;Revisa los permisos. Si hace falta aprobación del administrador, anota qué aplicación y archivo necesitas consultar.&lt;/li&gt;
+ &lt;li&gt;En tu conversación, elige la aplicación y pide el documento por nombre, carpeta, fecha o enlace. Comprueba que ha leído el documento correcto.&lt;/li&gt;
+ &lt;li&gt;Contrasta un dato en la fuente antes de usar el resultado. Si quieres guardar una salida en la carpeta, prueba por separado la acción de escritura y abre el archivo creado.&lt;/li&gt;
+ &lt;/ol&gt;&lt;p&gt;La disponibilidad depende de tu cuenta y de los permisos de la organización. La recuperación del archivo y su escritura son capacidades que debes comprobar.&lt;/p&gt;
+ &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt&quot;&gt;Ayuda de Google Drive&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/12143177-sharepoint-app-and-setup-in-chatgpt&quot;&gt;Ayuda de SharePoint y OneDrive de empresa&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;
+ &lt;/article&gt;
+&lt;article id=&quot;ruta-jaime&quot; class=&quot;personal-route&quot; aria-labelledby=&quot;nombre-jaime&quot;&gt;
+ &lt;div class=&quot;route-head&quot;&gt;&lt;p class=&quot;overline&quot;&gt;Ruta de trabajo · Jaime&lt;/p&gt;&lt;h2 id=&quot;nombre-jaime&quot;&gt;Prioridades del correo&lt;/h2&gt;&lt;p class=&quot;intro&quot;&gt;Preparar una lista de mensajes que requieren atención y un borrador adaptado al destinatario.&lt;/p&gt;&lt;/div&gt;
+ &lt;div class=&quot;card material&quot;&gt;&lt;h3&gt;Prepara tu entrada&lt;/h3&gt;&lt;p&gt;Ocho o diez mensajes ficticios o autorizados, con fecha, asunto y texto suficiente. Elige un ejemplo de tu tono habitual que puedas compartir.&lt;/p&gt;&lt;/div&gt;
+ &lt;ol class=&quot;steps&quot;&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Explica cómo decides la prioridad&lt;/h3&gt;&lt;p&gt;Antes de pedir la clasificación, anota qué te hace atender un mensaje primero. Distingue plazos confirmados, bloqueos y mensajes informativos.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Pide una bandeja de trabajo breve&lt;/h3&gt;&lt;p&gt;Conserva asunto, petición, plazo que consta, prioridad razonada y siguiente paso. Comprueba si la razón de prioridad aparece en el mensaje.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Prepara una respuesta&lt;/h3&gt;&lt;p&gt;Elige un correo y describe quién lo recibe, qué quieres conseguir y qué compromiso puedes asumir. Lee el borrador y corrige un punto concreto.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+ &lt;div class=&quot;duo&quot;&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Una salida útil&lt;/h3&gt;&lt;p&gt;Una lista de prioridades explicadas y un borrador revisado para un mensaje.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Cómo comprobarla&lt;/h3&gt;&lt;p&gt;¿La prioridad tiene respaldo? ¿El siguiente paso es una propuesta o un acuerdo? ¿El borrador conserva el tono y los compromisos que has confirmado?&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;challenge&quot;&gt;&lt;h3&gt;Prueba una dificultad&lt;/h3&gt;&lt;p&gt;Prueba un mensaje que diga «urgente» sin fecha y otro con un plazo concreto. Decide tú qué pesa más y explica el criterio al Proyecto.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Qué conservar al terminar&lt;/summary&gt;&lt;p&gt;En instrucciones, criterios de prioridad, tono y revisión. En fuentes, ejemplos autorizados de estilo. En cada chat, el grupo de correos y el objetivo del día.&lt;/p&gt;&lt;/details&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Si ya puedes repetirlo&lt;/summary&gt;&lt;p&gt;Con la clasificación comprobada, consulta a Diego si tu cuenta y los permisos de tu empresa permiten probar una consulta al correo conectado.&lt;/p&gt;&lt;/details&gt;
+ &lt;div class=&quot;card extension&quot;&gt;&lt;h3&gt;Pasar de una muestra a tu bandeja&lt;/h3&gt;&lt;p&gt;Abre la guía de Outlook de abajo. El siguiente paso es recuperar los mensajes desde tu cuenta y comprobar la cobertura antes de programar el resumen diario.&lt;/p&gt;&lt;/div&gt;
+ &lt;article class=&quot;card&quot; id=&quot;outlook&quot; style=&quot;margin-top:1rem;scroll-margin-top:6rem&quot;&gt;
+&lt;p class=&quot;overline&quot;&gt;Para Jaime · Correo con volumen diario&lt;/p&gt;&lt;h3&gt;De los ejemplos a la bandeja de Outlook&lt;/h3&gt;
+&lt;p&gt;Usa la muestra que ya revisaste para comprobar si el Proyecto aplica tus criterios al recuperar mensajes desde Outlook.&lt;/p&gt;
+&lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;1 · Conecta Correo de Outlook y revisa un tramo del día&lt;/summary&gt;&lt;ol class=&quot;connection-steps&quot;&gt;
+&lt;li&gt;Busca &lt;strong&gt;Correo de Outlook / Outlook Email&lt;/strong&gt; en Aplicaciones o Plugins. Conecta la cuenta correcta y revisa los permisos. En un buzón compartido, indica su dirección y confirma que tu cuenta ya tiene acceso.&lt;/li&gt;
+&lt;li&gt;Elige una franja horaria y el buzón que quieres revisar. Escribe el encargo con tus criterios de prioridad y pide que identifique cada mensaje con fecha, remitente, asunto y enlace o identificador.&lt;/li&gt;
+&lt;li&gt;Contrasta el recuento y algunos mensajes con Outlook. Pide que distinga mensajes localizados, leídos y pendientes por error o límite. Si falta cobertura, divide el intervalo y continúa.&lt;/li&gt;
+&lt;li&gt;Amplía después a un día completo. Comprueba peticiones, plazos que constan y prioridades antes de confiar en el resumen.&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;Los permisos y acciones disponibles dependen de la cuenta y la organización. Si solo recupera parte del correo, el informe debe mostrar esa limitación.&lt;/p&gt;&lt;/details&gt;
+&lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;2 · Deja un registro diario que puedas abrir&lt;/summary&gt;
+&lt;p&gt;Una fila por mensaje con fecha y hora, remitente, asunto, petición, plazo confirmado, prioridad y motivo, próximo paso e identificador o enlace. Añade el intervalo cubierto y los recuentos de procesados y pendientes.&lt;/p&gt;
+&lt;p&gt;Si Google Drive permite escribir, elige una carpeta concreta y prueba crear la salida. Comprueba si ofrece un archivo XLSX o una hoja nativa de Google Sheets y decide qué formato necesitas. Abre el resultado en su destino y contrasta dos filas.&lt;/p&gt;
+&lt;p&gt;Si necesitas un XLSX y la conexión solo admite hojas nativas, conserva el XLSX generado y súbelo o expórtalo mediante una acción compatible. Registra qué paso ha quedado probado.&lt;/p&gt;&lt;/details&gt;
+&lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;3 · Prueba la ejecución programada&lt;/summary&gt;
+&lt;p&gt;Con Diego, abre Programadas y comprueba si tu cuenta permite usar Outlook y la acción de guardar en el destino elegido. Copia a la tarea las reglas imprescindibles y los datos del destino. Una tarea creada en un Proyecto no puede acceder a los archivos subidos a ese Proyecto.&lt;/p&gt;
+&lt;p&gt;Antes de activar la rutina, realiza una ejecución de prueba y comprueba su estado y el resultado guardado. Una acción que requiere aprobación puede dejar la tarea pausada hasta que la revises.&lt;/p&gt;
+&lt;p&gt;Para un cierre nocturno, puedes elegir &lt;strong&gt;00:15, Europe/Madrid&lt;/strong&gt;, e indicar el intervalo desde las 00:00 del día anterior hasta las 00:00 del día de ejecución. Registra el identificador de cada mensaje para evitar duplicados. Mantén la revisión humana de las respuestas y de cualquier acción sobre el correo.&lt;/p&gt;
+&lt;p&gt;Conectar Outlook o Drive es el primer paso. La consulta bajo demanda, la creación del archivo y la ejecución programada deben probarse en tu propia cuenta.&lt;/p&gt;&lt;/details&gt;
+&lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Si la programación completa necesita otro paso&lt;/summary&gt;&lt;p&gt;Puedes conservar la consulta conectada bajo demanda para obtener el resumen del día. Si la cuenta no permite completar la rutina, anota el flujo que necesitas para revisarlo con el administrador.&lt;/p&gt;&lt;p&gt;En Microsoft, Power Automate permite programar flujos y escribir en tablas de Excel alojadas en OneDrive de empresa o SharePoint. La clasificación o el resumen mediante IA necesita una acción y licencia adecuadas. Puedes plantear esta continuación a partir de la tabla y los criterios que ya has validado.&lt;/p&gt;&lt;/details&gt;
+&lt;/article&gt;
+&lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Ayuda para tu conexión y tu resumen diario&lt;/summary&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/12512241-outlook-email-and-calendar-apps-in-chatgpt&quot;&gt;Outlook en ChatGPT&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt&quot;&gt;Google Drive y acciones de escritura&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt&quot;&gt;Tareas programadas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/power-automate/run-scheduled-tasks&quot;&gt;Programar flujos en Microsoft&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;
+ &lt;/article&gt;
+&lt;article id=&quot;ruta-marina&quot; class=&quot;personal-route&quot; aria-labelledby=&quot;nombre-marina&quot;&gt;
+ &lt;div class=&quot;route-head&quot;&gt;&lt;p class=&quot;overline&quot;&gt;Ruta de trabajo · Marina&lt;/p&gt;&lt;h2 id=&quot;nombre-marina&quot;&gt;De actas a seguimiento&lt;/h2&gt;&lt;p class=&quot;intro&quot;&gt;Extraer acuerdos y tareas de una reunión y actualizar su seguimiento con una novedad.&lt;/p&gt;&lt;/div&gt;
+ &lt;div class=&quot;card material&quot;&gt;&lt;h3&gt;Prepara tu entrada&lt;/h3&gt;&lt;p&gt;Un acta o unas notas autorizadas, con fecha. Si tienes una actualización posterior, prepárala como un documento distinto.&lt;/p&gt;&lt;/div&gt;
+ &lt;ol class=&quot;steps&quot;&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Define qué necesitas seguir&lt;/h3&gt;&lt;p&gt;Explica quién usará el registro y qué campos te sirven. Identifica si hay acuerdos, propuestas o asuntos sin resolver.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Pide el primer registro&lt;/h3&gt;&lt;p&gt;Conserva acción, responsable, fecha, estado y fragmento de origen. Señala los datos que falten. Comprueba una asignación en las notas.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Añade una novedad&lt;/h3&gt;&lt;p&gt;Aporta la actualización con su fecha. Pide que muestre qué ha cambiado y qué sigue pendiente, conservando lo que continúe vigente.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+ &lt;div class=&quot;duo&quot;&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Una salida útil&lt;/h3&gt;&lt;p&gt;Un registro de acciones con su origen y una nota breve con los cambios de seguimiento.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Cómo comprobarla&lt;/h3&gt;&lt;p&gt;¿Los responsables y fechas constan realmente? ¿Una propuesta sigue como propuesta? ¿Las contradicciones quedan visibles para aclararlas?&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;challenge&quot;&gt;&lt;h3&gt;Prueba una dificultad&lt;/h3&gt;&lt;p&gt;Prueba una tarea sin responsable o una actualización que contradiga una nota previa. Decide qué aclaración hace falta antes de darla por resuelta.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Qué conservar al terminar&lt;/summary&gt;&lt;p&gt;En instrucciones, cómo tratar acuerdos, pendientes y cambios. En fuentes, la plantilla de seguimiento. En cada chat, las notas y novedades con fecha.&lt;/p&gt;&lt;/details&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Si ya puedes repetirlo&lt;/summary&gt;&lt;p&gt;Prepara una nota de seguimiento para los participantes, revisando sus responsables, fechas y compromisos antes de enviarla.&lt;/p&gt;&lt;/details&gt;
+ &lt;div class=&quot;card extension&quot;&gt;&lt;h3&gt;Reunir acta y actualización&lt;/h3&gt;&lt;p&gt;Si el equipo guarda las actas en Drive o SharePoint, prueba recuperar una por fecha y su actualización posterior. Confirma que ambas son de la reunión correcta y revisa los cambios antes de actualizar el seguimiento.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot; id=&quot;conexion-marina&quot;&gt;&lt;summary&gt;Recupera el acta y su actualización&lt;/summary&gt;&lt;p&gt;Si las notas y actas están en Google Drive o SharePoint, conecta esa aplicación y busca la reunión por fecha o título. Abre una fuente y comprueba un acuerdo. Aporta después la actualización con su fecha para revisar qué cambió y qué sigue pendiente.&lt;/p&gt;
+ &lt;ol class=&quot;connection-steps&quot;&gt;
+ &lt;li&gt;Busca Google Drive o SharePoint en Aplicaciones o Plugins de ChatGPT. Usa la cuenta autorizada que tenga acceso a tu documentación.&lt;/li&gt;
+ &lt;li&gt;Revisa los permisos. Si hace falta aprobación del administrador, anota qué aplicación y archivo necesitas consultar.&lt;/li&gt;
+ &lt;li&gt;En tu conversación, elige la aplicación y pide el documento por nombre, carpeta, fecha o enlace. Comprueba que ha leído el documento correcto.&lt;/li&gt;
+ &lt;li&gt;Contrasta un dato en la fuente antes de usar el resultado. Si quieres guardar una salida en la carpeta, prueba por separado la acción de escritura y abre el archivo creado.&lt;/li&gt;
+ &lt;/ol&gt;&lt;p&gt;La disponibilidad depende de tu cuenta y de los permisos de la organización. La recuperación del archivo y su escritura son capacidades que debes comprobar.&lt;/p&gt;
+ &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt&quot;&gt;Ayuda de Google Drive&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/en/articles/12143177-sharepoint-app-and-setup-in-chatgpt&quot;&gt;Ayuda de SharePoint y OneDrive de empresa&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;
+ &lt;/article&gt;
+&lt;article id=&quot;ruta-daniel&quot; class=&quot;personal-route&quot; aria-labelledby=&quot;nombre-daniel&quot;&gt;
+ &lt;div class=&quot;route-head&quot;&gt;&lt;p class=&quot;overline&quot;&gt;Ruta de trabajo · Daniel&lt;/p&gt;&lt;h2 id=&quot;nombre-daniel&quot;&gt;Aprender el proceso&lt;/h2&gt;&lt;p class=&quot;intro&quot;&gt;Comprender un proceso de inyección de plástico con un fragmento de documentación y tus observaciones.&lt;/p&gt;&lt;/div&gt;
+ &lt;div class=&quot;card material&quot;&gt;&lt;h3&gt;Prepara tu entrada&lt;/h3&gt;&lt;p&gt;Un apartado breve de un manual autorizado y notas propias de un proceso. Usa solo las imágenes necesarias para ese apartado.&lt;/p&gt;&lt;/div&gt;
+ &lt;ol class=&quot;steps&quot;&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Elige una pregunta de aprendizaje&lt;/h3&gt;&lt;p&gt;Acota el trabajo a una fase, una máquina o un concepto. Escribe qué has observado y qué parte quieres entender mejor.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Pide una explicación conectada con la fuente&lt;/h3&gt;&lt;p&gt;Relaciona la explicación con el fragmento del manual y tus notas. Señala las dudas de la práctica que deba resolver tu responsable.&lt;/p&gt;&lt;/li&gt;&lt;li class=&quot;step&quot;&gt;&lt;h3&gt;Explícalo con tus palabras&lt;/h3&gt;&lt;p&gt;Pide unas preguntas breves sobre ese apartado. Responde sin mirar y contrasta después con el manual. Revisa qué dato es específico de la empresa y cuál es general.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+ &lt;div class=&quot;duo&quot;&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Una salida útil&lt;/h3&gt;&lt;p&gt;Una ficha breve del proceso, sus fuentes y las dudas que consultarás, más una comprobación de lo que has entendido.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Cómo comprobarla&lt;/h3&gt;&lt;p&gt;¿La explicación se apoya en el manual? ¿Se distinguen tus observaciones de una causa o una hipótesis? ¿Puedes explicar el proceso sin repetir el texto?&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;challenge&quot;&gt;&lt;h3&gt;Prueba una dificultad&lt;/h3&gt;&lt;p&gt;Pregunta por un parámetro que no aparezca en la documentación. Comprueba que se marque para consulta con la persona responsable.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Qué conservar al terminar&lt;/summary&gt;&lt;p&gt;En instrucciones, tu objetivo de aprendizaje y la necesidad de distinguir fuentes y dudas. En fuentes, documentación vigente y autorizada. En cada chat, una fase o pregunta concreta.&lt;/p&gt;&lt;/details&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Si ya puedes repetirlo&lt;/summary&gt;&lt;p&gt;Tras comprobar un apartado, elige el siguiente. Cualquier propuesta sobre parámetros o intervención en equipos se revisa con el responsable técnico.&lt;/p&gt;&lt;/details&gt;
+ &lt;div class=&quot;card extension&quot;&gt;&lt;h3&gt;Construir tu guía de consulta&lt;/h3&gt;&lt;p&gt;Después de comprender un apartado, conserva una ficha revisada con el manual, su versión y las dudas resueltas por tu responsable. Añade un índice breve para encontrar las fases y repasa con preguntas nuevas sobre el siguiente apartado.&lt;/p&gt;&lt;/div&gt;
+ &lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Ordena tus siguientes consultas de aprendizaje&lt;/summary&gt;&lt;p&gt;Trabaja con un apartado cada vez. Guarda el nombre y versión del manual, una ficha que hayas revisado y las dudas resueltas por tu responsable. Antes de sumar más archivos, prueba si puedes explicar el apartado con tus palabras y localizar una respuesta concreta.&lt;/p&gt;&lt;/details&gt;
+ &lt;/article&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;section id=&quot;ayuda&quot; aria-labelledby=&quot;titulo-ayuda&quot;&gt;&lt;p class=&quot;overline&quot;&gt;03 / Cuando algo no encaja&lt;/p&gt;&lt;h2 id=&quot;titulo-ayuda&quot;&gt;Una pregunta para avanzar&lt;/h2&gt;
+&lt;div class=&quot;pills&quot;&gt;
+&lt;details&gt;&lt;summary&gt;No sé cómo empezar&lt;/summary&gt;&lt;p&gt;Escribe qué haces tú cuando recibes ese documento y qué necesitas entregar al terminar. Acota el primer intento a una factura, unas líneas o unos pocos mensajes.&lt;/p&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;La respuesta parece buena&lt;/summary&gt;&lt;p&gt;Elige una afirmación importante. Abre el original y busca qué la respalda. Si falta respaldo, pregunta qué puede verificarse y qué queda pendiente.&lt;/p&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Necesito corregir una cosa&lt;/summary&gt;&lt;p&gt;Señala el fragmento, explica qué dice la fuente y pide el cambio concreto. Comprueba después que se mantienen los datos que ya estaban bien.&lt;/p&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Me da otra vez el mismo fallo&lt;/summary&gt;&lt;p&gt;Decide si falta un dato, una regla o una fuente. Cambia solo esa pieza y repite la misma entrada. Anota qué resultado has obtenido para consultarlo con Diego.&lt;/p&gt;&lt;/details&gt;
+&lt;/div&gt;
+&lt;details class=&quot;advice&quot;&gt;&lt;summary&gt;Qué poner en instrucciones, fuentes y chats&lt;/summary&gt;&lt;p&gt;Guarda en las instrucciones del Proyecto las reglas que se repiten y la revisión que necesitas. Mantén como fuentes las guías o plantillas vigentes que vuelvas a utilizar. En cada chat, aporta la entrada concreta y el encargo del día. Una entrada nueva te ayuda a comprobar si las reglas sirven.&lt;/p&gt;&lt;/details&gt;
+&lt;/section&gt;
+&lt;section id=&quot;instrucciones&quot; aria-labelledby=&quot;titulo-instrucciones&quot;&gt;
+&lt;p class=&quot;overline&quot;&gt;04 / Guarda el criterio que has construido&lt;/p&gt;&lt;h2 id=&quot;titulo-instrucciones&quot;&gt;De la conversación a tus instrucciones&lt;/h2&gt;
+&lt;p class=&quot;intro&quot;&gt;Cuando hayas comprobado que la tarea funciona y revisado una segunda entrada, usa este cierre en el chat donde has trabajado. Si una decisión importante está en otro chat, incorpora primero el acuerdo revisado.&lt;/p&gt;
+&lt;article class=&quot;prompt&quot;&gt;&lt;h3&gt;Prepara las instrucciones del Proyecto&lt;/h3&gt;&lt;p class=&quot;where&quot;&gt;La IA sintetiza lo que habéis hecho. Tú revisas las reglas antes de guardarlas.&lt;/p&gt;
+&lt;details&gt;&lt;summary&gt;Ver el prompt de cierre&lt;/summary&gt;&lt;pre id=&quot;prompt-instrucciones&quot;&gt;A partir de esta conversación y de los resultados que he revisado, redacta unas instrucciones breves para este Proyecto. Recoge el objetivo, la forma de trabajar, las fuentes y su versión, el formato de salida, las reglas que he confirmado y la revisión humana necesaria. Separa lo que debo aportar en cada encargo. Marca cualquier criterio pendiente. Usa solo lo acordado y sustituye los datos de cada caso por campos entre corchetes. Devuelve un texto listo para revisar y pegar en las instrucciones del Proyecto.&lt;/pre&gt;&lt;button class=&quot;button copy&quot; type=&quot;button&quot; data-copy=&quot;prompt-instrucciones&quot; hidden&gt;Copiar prompt de cierre&lt;/button&gt;&lt;span class=&quot;status&quot; role=&quot;status&quot;&gt;&lt;/span&gt;&lt;/details&gt;&lt;/article&gt;
+&lt;ol class=&quot;connection-steps&quot;&gt;&lt;li&gt;&lt;strong&gt;Revisa el borrador.&lt;/strong&gt; Confirma el objetivo, las fuentes, el formato y las decisiones que deben quedar pendientes. Quita datos que solo pertenezcan al ejemplo.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Guarda las reglas.&lt;/strong&gt; Abre el menú del Proyecto y busca Ajustes del Proyecto → Instrucciones. Combina lo nuevo con las instrucciones útiles que ya tengas.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Prueba otro chat.&lt;/strong&gt; Dentro del mismo Proyecto, abre un chat nuevo, aporta una entrada distinta y verifica un dato con la fuente.&lt;/li&gt;&lt;/ol&gt;
+&lt;p class=&quot;revision&quot;&gt;&lt;strong&gt;Qué te llevas.&lt;/strong&gt; Un Proyecto con reglas revisadas, fuentes identificadas y una forma de empezar el siguiente encargo.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id=&quot;mejora&quot; aria-labelledby=&quot;titulo-mejora&quot;&gt;&lt;p class=&quot;overline&quot;&gt;06 / Decide cómo continuar&lt;/p&gt;&lt;h2 id=&quot;titulo-mejora&quot;&gt;Elige una mejora que te sirva&lt;/h2&gt;
+&lt;p class=&quot;intro&quot;&gt;Después de cerrar la tarea, usa lo que ya habéis trabajado para buscar el siguiente paso. Escoge una mejora y acuerda cómo comprobar si aporta valor.&lt;/p&gt;
+&lt;article class=&quot;prompt&quot;&gt;&lt;details&gt;&lt;summary&gt;Ver el prompt para explorar mejoras&lt;/summary&gt;&lt;pre id=&quot;prompt-mejoras&quot;&gt;Con lo que hemos hecho y comprobado, propón hasta tres mejoras concretas para repetir esta tarea con menos pasos y mantener el control del resultado. Explica qué aporta cada una, qué necesitaría y cómo probarla. Si propones una aplicación o una tarea programada, indica qué capacidad y permiso habría que verificar en mi cuenta. Recomienda un primer paso y espera a que yo elija.&lt;/pre&gt;&lt;button class=&quot;button copy&quot; type=&quot;button&quot; data-copy=&quot;prompt-mejoras&quot; hidden&gt;Copiar prompt de mejora&lt;/button&gt;&lt;span class=&quot;status&quot; role=&quot;status&quot;&gt;&lt;/span&gt;&lt;/details&gt;&lt;/article&gt;
+&lt;/section&gt;
+&lt;section id=&quot;cierre&quot; class=&quot;finish&quot; aria-labelledby=&quot;titulo-cierre&quot;&gt;&lt;p class=&quot;overline&quot;&gt;Tu cierre del taller · Lo que te llevas&lt;/p&gt;&lt;h2 id=&quot;titulo-cierre&quot;&gt;Deja preparada la próxima vez&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt; Tengo una salida que he contrastado con su fuente.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt; He probado otra entrada y sé qué tuve que aclarar o mejorar.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt; He revisado las instrucciones y comprobado otro chat del Proyecto.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt; Sé qué parte debe revisar una persona.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt; He elegido mi próximo uso y una mejora que quiero probar.&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p class=&quot;homework&quot;&gt;&lt;strong&gt;Para enseñárselo a Diego.&lt;/strong&gt; Muestra tu resultado, señala un dato comprobado y explica qué escribirás cuando recibas el siguiente caso. Si algo queda pendiente, anótalo en tu Proyecto junto a la próxima prueba.&lt;/p&gt;
+&lt;p&gt;Anota también qué conexión o ejecución quedó comprobada y qué paso sigue pendiente. Las casillas son un recordatorio de esta página. Conserva tus resultados y notas en tu Proyecto o en un archivo propio.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;p&gt;&lt;strong&gt;AITIC y AEPV&lt;/strong&gt; · Formación práctica para tu trabajo&lt;/p&gt;&lt;p&gt;Esta página no recibe documentos ni se conecta a tu cuenta de IA.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://help.openai.com/es-es/articles/10169521-projects-in-chatgpt&quot;&gt;Ayuda sobre Proyectos&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.aepd.es/infografias/info-recomendaciones-chatbots-ia.pdf&quot;&gt;Recomendaciones de la AEPD&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/footer&gt;
+&lt;script&gt;
+const routeLinks = Array.from(document.querySelectorAll(&#x27;[data-route]&#x27;));
+const routeCards = Array.from(document.querySelectorAll(&#x27;.personal-route&#x27;));
+const routeMessage = document.getElementById(&#x27;mensaje-ruta&#x27;);
+
+function chooseRoute(id) {
+  const card = document.getElementById(&#x27;ruta-&#x27; + id);
+  if (!card || !routeCards.includes(card)) return;
+  document.body.dataset.person = id;
+  routeCards.forEach(item =&gt; { item.hidden = item !== card; });
+  routeLinks.forEach(link =&gt; {
+    if (link.dataset.route === id) link.setAttribute(&#x27;aria-current&#x27;, &#x27;true&#x27;);
+    else link.removeAttribute(&#x27;aria-current&#x27;);
+  });
+  const selected = routeLinks.find(link =&gt; link.dataset.route === id);
+  const name = selected.firstChild.textContent.trim();
+  routeMessage.textContent = &#x27;Ruta de &#x27; + name + &#x27;. Sigue los pasos y conserva tu propia forma de trabajar.&#x27;;
+}
+
+function readRouteHash() {
+  if (window.location.hash.startsWith(&#x27;#ruta-&#x27;)) chooseRoute(window.location.hash.slice(6));
+}
+
+routeLinks.forEach(link =&gt; link.addEventListener(&#x27;click&#x27;, () =&gt; chooseRoute(link.dataset.route)));
+routeCards.forEach(card =&gt; { card.hidden = true; });
+routeMessage.textContent = &#x27;Elige tu nombre para abrir los pasos de tu proyecto.&#x27;;
+window.addEventListener(&#x27;hashchange&#x27;, readRouteHash);
+readRouteHash();
+
+async function copyClosingPrompt(button) {
+ const text = document.getElementById(button.dataset.copy).textContent;
+ const status = button.nextElementSibling;
+ try {
+   if (!navigator.clipboard?.writeText) throw new Error(&#x27;No disponible&#x27;);
+   await navigator.clipboard.writeText(text);
+   status.textContent = &#x27;Copiado. Úsalo en el chat donde has trabajado.&#x27;;
+ } catch {
+   const selection = window.getSelection();
+   if (selection) {
+     const range = document.createRange();
+     range.selectNodeContents(document.getElementById(button.dataset.copy));
+     selection.removeAllRanges();
+     selection.addRange(range);
+     status.textContent = &#x27;Texto seleccionado. Usa la opción Copiar de tu dispositivo.&#x27;;
+   } else {
+     status.textContent = &#x27;Selecciona el texto y cópialo manualmente.&#x27;;
+   }
+ }
+}
+document.querySelectorAll(&#x27;[data-copy]&#x27;).forEach(button =&gt; {
+ button.hidden = false;
+ button.addEventListener(&#x27;click&#x27;, () =&gt; copyClosingPrompt(button));
+});
+
+&lt;/script&gt;
+
+&lt;style&gt;.top{display:none}.nav{position:static!important}.hero .wrap{padding-top:2rem;padding-bottom:2rem}html{scroll-behavior:auto}&lt;/style&gt;
+&lt;script&gt;
+(() =&gt; {
+  const day = 2;
+  let previousHeight = 0;
+  function reportHeight() {
+    const height = Math.ceil(document.body.getBoundingClientRect().height) + 4;
+    if (height !== previousHeight &amp;&amp; height &gt; 40) {
+      previousHeight = height;
+      parent.postMessage({type:&#x27;aepv-height&#x27;, day, height}, &#x27;*&#x27;);
+    }
+  }
+  const observer = new ResizeObserver(reportHeight);
+  observer.observe(document.body);
+  window.addEventListener(&#x27;load&#x27;, reportHeight);
+  window.addEventListener(&#x27;message&#x27;, event =&gt; {
+    if (event.source === parent &amp;&amp; event.data?.type === &#x27;aepv-measure&#x27;) {
+      previousHeight = 0;
+      reportHeight();
+    }
+  });
+  window.addEventListener(&#x27;resize&#x27;, reportHeight);
+  document.addEventListener(&#x27;toggle&#x27;, reportHeight, true);
+  document.addEventListener(&#x27;click&#x27;, event =&gt; {
+    const link = event.target.closest(&#x27;a[href^=&quot;#&quot;]&#x27;);
+    if (!link) return;
+    const target = document.getElementById(link.getAttribute(&#x27;href&#x27;).slice(1));
+    if (!target) return;
+    event.preventDefault();
+    requestAnimationFrame(() =&gt; {
+      reportHeight();
+      parent.postMessage({
+        type:&#x27;aepv-anchor&#x27;, day,
+        offset:target.getBoundingClientRect().top + window.scrollY
+      }, &#x27;*&#x27;);
+    });
+  });
+  reportHeight();
+})();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe></section>
+</main>
+<footer class="bottom">AITIC y AEPV · Taller práctico de asistentes de IA</footer>
+<script>
+(() => {
+  const days = [1, 2];
+  const sections = days.map(day => document.getElementById('jornada' + day));
+  const frames = days.map(day => document.getElementById('frame-' + day));
+  const tabs = days.map(day => document.getElementById('tab-' + day));
+  const selector = document.getElementById('jornadas');
+  let activeDay = 1;
+
+  function showDay(day, scrollToStart) {
+    if (!days.includes(day)) return;
+    activeDay = day;
+    sections.forEach((section, index) => {
+      section.hidden = days[index] !== day;
+      if (days[index] === day) tabs[index].setAttribute('aria-current', 'page');
+      else tabs[index].removeAttribute('aria-current');
+    });
+    frames[day - 1].contentWindow.postMessage({type:'aepv-measure'}, '*');
+    if (scrollToStart) sections[day - 1].scrollIntoView({block:'start'});
+  }
+
+  frames.forEach(frame => frame.addEventListener('load', () => {
+    frame.contentWindow.postMessage({type:'aepv-measure'}, '*');
+  }));
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => showDay(days[index], true));
+  });
+  window.addEventListener('hashchange', () => {
+    if (location.hash === '#jornada1') showDay(1, true);
+    if (location.hash === '#jornada2') showDay(2, true);
+  });
+  window.addEventListener('message', event => {
+    const index = frames.findIndex(frame => frame.contentWindow === event.source);
+    if (index < 0 || event.data?.day !== days[index]) return;
+    if (event.data.type === 'aepv-height') {
+      const height = event.data.height;
+      if (Number.isFinite(height) && height >= 40 && height <= 150000) {
+        frames[index].style.height = Math.ceil(height) + 'px';
+      }
+    }
+    if (event.data.type === 'aepv-anchor' && activeDay === days[index]) {
+      const offset = event.data.offset;
+      if (Number.isFinite(offset) && offset >= 0 && offset <= 150000) {
+        const target = frames[index].getBoundingClientRect().top + window.scrollY
+          + offset - selector.getBoundingClientRect().height - 12;
+        window.scrollTo({top:Math.max(0, target), behavior:'auto'});
+      }
+    }
+  });
+  showDay(location.hash === '#jornada2' ? 2 : 1, false);
+})();
 </script>
-</body>
-</html>
+</body></html>
